@@ -6,7 +6,12 @@ Project visions, goals, and mission statement ( Note – topic doesn’t have to
 - Our mission is to create a new app to make successfully growing and caring for plants easier. 
 
 Use Cases​
+- Allow those who want to get into plants the opportunity to be successful
+- Give a space for plant owners to learn from one another
+
 
 Agile project board setup with assigned project tasks and deadlines​
+- https://app.clickup.com/9011027758/v/b/8chjqte-111
 
 Code repository
+- This is the code repository.
