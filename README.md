@@ -6,8 +6,9 @@ Project visions, goals, and mission statement ( Note – topic doesn’t have to
 - Our mission is to create a new app to make successfully growing and caring for plants easier. 
 
 Use Cases​
-- Allow those who want to get into plants the opportunity to be successful
-- Give a space for plant owners to learn from one another
+- User A is new to plant care and has never owned plants before. They want to know the best plants to start with for their area, as well as guidance for the best products to purchase.
+- User B is having trouble keeping their plants alive. They have the right tools, but often forget to water their plants and forget which ones need more sunlight.
+- User C has recently moved to a new, much hotter climate. They love plants and want to get new plants that will thrive in their environment, but don't know which plants would be best or how to care for them. 
 
 
 Agile project board setup with assigned project tasks and deadlines​
