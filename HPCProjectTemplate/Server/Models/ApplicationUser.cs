@@ -11,9 +11,9 @@ namespace HPCProjectTemplate.Server.Models
     public class ApplicationUser : IdentityUser
     {
        
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-       public Account Account { get; set; } = new();
+        //public string FirstName { get; set; }
+        //public string LastName { get; set; }
+        //public Account Account { get; set; } = new();
 
         public List<Plant> FavoritePlants { get; set; } = new();
     }

@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5d134721-dc81-4e6a-b2f9-877bbaa3e9b9": {
+      "ProjectGuid": "5d134721-dc81-4e6a-b2f9-877bbaa3e9b9",
+      "DisplayName": "HPCProjectTemplate.Client",
+      "ColorIndex": 0
+    },
+    "4d591d98-9de3-4a65-99ab-f3f60c789ebf": {
+      "ProjectGuid": "4d591d98-9de3-4a65-99ab-f3f60c789ebf",
+      "DisplayName": "HPCProjectTemplate.Server",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

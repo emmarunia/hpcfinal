@@ -22,12 +22,13 @@ namespace HPCProjectTemplate.Server.Controllers
                                    .Select(u => new UserDTO
                                    {
                                        Id = u.Id,
-                                       UserName = u.UserName,
-                                       FirstName = u.FirstName,
-                                       LastName = u.LastName,
+                                       //UserName = u.UserName,
+                                       //FirstName = u.FirstName,
+                                       //LastName = u.LastName,
                                        FavoritePlants = u.FavoritePlants
                                    }).FirstOrDefaultAsync(u => u.UserName == userName);
 
             return Ok(userPlants);
         }
+    }
 }
