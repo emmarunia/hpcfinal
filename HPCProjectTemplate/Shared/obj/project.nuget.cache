@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aVJuGmrvYLrRcl23b9cSl3hzq3zgme37b0da/UD0r55My+oGYk0xeM+wqjOUjD66Czjij15F1j9mNRyMkbIHxA==",
+  "dgSpecHash": "MkhAa1JlOGm3snR88kF2izOMzWeIhwjOG1L6lRVdwoMnWBTcIciP4kCBj11EwoV2zTGeo76YwAz5/QafDvS5KA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\967303\\source\\repos\\HPCProjectTemplate\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj",
+  "projectFilePath": "C:\\Users\\cammc\\Source\\Repos\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
