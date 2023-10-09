@@ -1,0 +1,13 @@
+﻿@using HPCProjectTemplate.Shared;
+
+@if (Plant is not null)
+{
+    <li>
+        @Plant.common_name (@Plant.dimension)
+    </li>
+}
+
+@code {
+    [Parameter]
+    public PerenualPlantResponse? Plant { get; set; } = null;
+}
