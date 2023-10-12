@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj": {}
+    "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj": {
+    "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj",
+        "projectUniqueName": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj",
         "projectName": "HPCProjectTemplate.Client",
-        "projectPath": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj",
-        "packagesPath": "C:\\Users\\967303\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\obj\\",
+        "projectPath": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Client\\HPCProjectTemplate.Client.csproj",
+        "packagesPath": "C:\\Users\\967294\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\967303\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\967294\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj": {
-                "projectPath": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj"
+              "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj": {
+                "projectPath": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj"
               }
             }
           }
@@ -72,16 +68,23 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -90,21 +93,17 @@
         }
       }
     },
-    "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj": {
+    "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj",
         "projectName": "HPCProjectTemplate.Shared",
-        "projectPath": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj",
-        "packagesPath": "C:\\Users\\967303\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Shared\\HPCProjectTemplate.Shared.csproj",
+        "packagesPath": "C:\\Users\\967294\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\967294\\Desktop\\HPCFinalProject\\hpcfinal\\HPCProjectTemplate\\Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\967303\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\967294\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -135,7 +134,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

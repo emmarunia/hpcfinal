@@ -81,6 +81,29 @@ main[b-wu2o6d7a4a] {
     }
 }
 /* /Shared/NavMenu.razor.rz.scp.css */
+?html[b-66k0woxscr] {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html[b-66k0woxscr] {
+        font-size: 16px;
+    }
+}
+
+.btn:focus[b-66k0woxscr], .btn:active:focus[b-66k0woxscr], .btn-link.nav-link:focus[b-66k0woxscr], .form-control:focus[b-66k0woxscr], .form-check-input:focus[b-66k0woxscr] {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html[b-66k0woxscr] {
+    position: relative;
+    min-height: 100%;
+}
+
+body[b-66k0woxscr] {
+    margin-bottom: 60px;
+}
+
 .navbar-toggler[b-66k0woxscr] {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -107,11 +130,11 @@ main[b-wu2o6d7a4a] {
 }
 
     .nav-item:first-of-type[b-66k0woxscr] {
-        padding-top: 1rem;
+      
     }
 
     .nav-item:last-of-type[b-66k0woxscr] {
-        padding-bottom: 1rem;
+        
     }
 
     .nav-item[b-66k0woxscr]  a {
@@ -123,15 +146,15 @@ main[b-wu2o6d7a4a] {
         line-height: 3rem;
     }
 
-.nav-item[b-66k0woxscr]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .nav-item[b-66k0woxscr]  a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
 
-.nav-item[b-66k0woxscr]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .nav-item[b-66k0woxscr]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler[b-66k0woxscr] {
@@ -141,5 +164,11 @@ main[b-wu2o6d7a4a] {
     .collapse[b-66k0woxscr] {
         /* Never collapse the sidebar for wide screens */
         display: block;
+    }
+
+    .nav-scrollable[b-66k0woxscr] {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
     }
 }
