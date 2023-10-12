@@ -23,7 +23,7 @@ namespace HPCProjectTemplate.Server.Controllers
                                    .Select(u => new UserDTO
                                    {
                                        Id = u.Id,
-                                       //UserName = u.UserName,
+                                       UserName = u.UserName,
                                        //FirstName = u.FirstName,
                                        //LastName = u.LastName,
                                        FavoritePlants = u.FavoritePlants
