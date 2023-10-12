@@ -9,6 +9,7 @@ namespace HPCProjectTemplate.Server.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+
         public UserPlantController(ApplicationDbContext context)
         {
             _context = context;
