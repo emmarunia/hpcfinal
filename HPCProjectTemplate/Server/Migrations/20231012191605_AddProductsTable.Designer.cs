@@ -4,6 +4,7 @@ using HPCProjectTemplate.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HPCProjectTemplate.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231012191605_AddProductsTable")]
+    partial class AddProductsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -324,148 +326,6 @@ namespace HPCProjectTemplate.Server.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            brand = "Schultz",
-                            name = "Plant Food",
-                            price = 11.99
-                        },
-                        new
-                        {
-                            id = 2,
-                            brand = "The Sill",
-                            name = "Watering Can",
-                            price = 15.0
-                        },
-                        new
-                        {
-                            id = 3,
-                            brand = "RestMo",
-                            name = "Hose",
-                            price = 19.989999999999998
-                        },
-                        new
-                        {
-                            id = 4,
-                            brand = "J&B",
-                            name = "Hose Nozzle",
-                            price = 79.950000000000003
-                        },
-                        new
-                        {
-                            id = 5,
-                            brand = "Cool Job",
-                            name = "Gardening Gloves",
-                            price = 9.9900000000000002
-                        },
-                        new
-                        {
-                            id = 6,
-                            brand = "Trendspot",
-                            name = "Small Pot",
-                            price = 15.0
-                        },
-                        new
-                        {
-                            id = 7,
-                            brand = "Bloem Terra",
-                            name = "Medium Pot",
-                            price = 15.66
-                        },
-                        new
-                        {
-                            id = 8,
-                            brand = "Style Selections",
-                            name = "Large Pot",
-                            price = 16.98
-                        },
-                        new
-                        {
-                            id = 9,
-                            brand = "Aplree",
-                            name = "Spray Bottle",
-                            price = 9.9900000000000002
-                        },
-                        new
-                        {
-                            id = 10,
-                            brand = "Fox Farm",
-                            name = "Potting Soil",
-                            price = 23.989999999999998
-                        },
-                        new
-                        {
-                            id = 11,
-                            brand = "Growneer",
-                            name = "Plant Saucer",
-                            price = 14.99
-                        },
-                        new
-                        {
-                            id = 12,
-                            brand = "Gouevn",
-                            name = "Soil Moisture Meter",
-                            price = 8.9700000000000006
-                        },
-                        new
-                        {
-                            id = 13,
-                            brand = "Maxam",
-                            name = "Watering Globes",
-                            price = 17.949999999999999
-                        },
-                        new
-                        {
-                            id = 14,
-                            brand = "Flora Animalia",
-                            name = "Pruning Shears",
-                            price = 24.0
-                        },
-                        new
-                        {
-                            id = 15,
-                            brand = "Roadwater",
-                            name = "Outdoor Plant Stand",
-                            price = 32.990000000000002
-                        },
-                        new
-                        {
-                            id = 16,
-                            brand = "PLantsHome",
-                            name = "Indoor Plant Stand",
-                            price = 20.989999999999998
-                        },
-                        new
-                        {
-                            id = 17,
-                            brand = "Honeywell",
-                            name = "Humidifier",
-                            price = 41.990000000000002
-                        },
-                        new
-                        {
-                            id = 18,
-                            brand = "Leonard",
-                            name = "Gardening Tool Set",
-                            price = 54.689999999999998
-                        },
-                        new
-                        {
-                            id = 19,
-                            brand = "Soltech Solutions",
-                            name = "LED Grow Light",
-                            price = 149.99000000000001
-                        },
-                        new
-                        {
-                            id = 20,
-                            brand = "Fiskars",
-                            name = "Hand Trowel",
-                            price = 12.99
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
