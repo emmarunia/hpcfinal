@@ -2,7 +2,7 @@
 
 @if (User is not null)
 {
-    <ul>
+    <ul style="list-style-type:none">
         @foreach (HPCProjectTemplate.Shared.PerenualPlantResponse plant in plants)
         {
             <PlantDetails Plant=plant/>

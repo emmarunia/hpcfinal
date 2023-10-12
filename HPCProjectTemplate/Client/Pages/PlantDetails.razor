@@ -3,7 +3,7 @@
 @if (Plant is not null)
 {
     <li>
-        @Plant.common_name (@Plant.dimension)
+        <img src="@Plant.default_image.thumbnail">   @Plant.common_name: @Plant.sunlight[0], @Plant.watering, @Plant.care_level
     </li>
 }
 
