@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject NavigationManager Navigation
+
+<header style="transform: translate3d(0px, 9%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="header">
+    <div class="page-padding">
+        <div class="container nav">
+            <img src="/logo2.png" style="float:left; width:150px; height:150px; margin-top:-85.66px; margin-left:16px">
+            <div>
+                    <button class="nav-link btn btn-link" style="float:right; padding:6px 10px; display:block; margin-top:8px; margin-right:16px; color:white; background-color:black; border:none; width:min-content; padding:6px; padding-left:40px; padding-right:40px; border-radius:20px" @onclick="BeginLogOut">Logout</button>
+                    <NavMenu/>
+        </div>
+    </div>
+    </div>
+</header>
+
+<div>
+    <br /><br />
+    @Body
+</div>
+
+
+@code{
+    private void BeginLogOut()
+    {
+        Navigation.NavigateTo("authentication/logout");
+    }
+    private void BeginLogin()
+    {
+        Navigation.NavigateTo("authentication/login");
+    }
+        private bool collapseNavMenu = true;
+
+        private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+        private void ToggleNavMenu()
+        {
+            collapseNavMenu = !collapseNavMenu;
+        }
+}
