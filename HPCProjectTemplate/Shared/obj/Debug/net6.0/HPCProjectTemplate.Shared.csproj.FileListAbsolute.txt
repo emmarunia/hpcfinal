@@ -1,0 +1,11 @@
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\bin\Debug\net6.0\HPCProjectTemplate.Shared.deps.json
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\bin\Debug\net6.0\HPCProjectTemplate.Shared.dll
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\bin\Debug\net6.0\HPCProjectTemplate.Shared.pdb
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\HPCProjectTemplate.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\HPCProjectTemplate.Shared.AssemblyInfoInputs.cache
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\HPCProjectTemplate.Shared.AssemblyInfo.cs
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\HPCProjectTemplate.Shared.csproj.CoreCompileInputs.cache
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\HPCProjectTemplate.Shared.dll
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\refint\HPCProjectTemplate.Shared.dll
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\HPCProjectTemplate.Shared.pdb
+C:\Users\967294\Desktop\HPCFinalProject\hpcfinal\HPCProjectTemplate\Shared\obj\Debug\net6.0\ref\HPCProjectTemplate.Shared.dll
