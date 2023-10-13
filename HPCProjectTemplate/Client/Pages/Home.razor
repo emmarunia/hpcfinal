@@ -13,8 +13,15 @@
         <br />
         for plants easier.
     </h3>
-    <input type="text" class="form-label" @bind="searchText" /> 
-    <button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
+    <AuthorizeView>
+        <Authorized>
+            <a>Welcome, @context.User.Identity?.Name!</a>
+            <br />
+            <input type="text" class="form-label" @bind="searchText" />
+            <button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
+        </Authorized>
+    </AuthorizeView>
+    
 </div>
 
 
