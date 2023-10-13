@@ -1,0 +1,20 @@
+﻿@page "/search"
+@page "/search/{searchText}"
+
+<input type="text" class="form-label" @bind="SearchText" /> 
+<button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
+
+@foreach (var plant in plants)
+{
+    <div>
+        <p>@plant.common_name</p>
+    </div>
+}
+
+@if (plants.Count <= 0)
+{
+    <p>No results found for @SearchText</p>
+
+}
+
+
