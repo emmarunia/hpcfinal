@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/967294/Desktop/HPCFinalProject/hpcfinal/HPCProjectTemplate/Client/Shared/Search.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlYXJjaC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/967294/Desktop/HPCFinalProject/hpcfinal/HPCProjectTemplate/Client/Shared/SignedInDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZ25lZEluRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
