@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WLW2gDNgt/d0uuplAjIEaiH4A/DGeKQnZobgIso9Rbs=",
+  "Hash": "BuRa9qYZohLSao2mypcSWIGq9deQzanQPIkbkqdjc38=",
   "Source": "HPCProjectTemplate.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -491,6 +491,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\967303\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Configuration.Json.dll"
+    },
+    {
+      "Identity": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.UserSecrets.dll",
+      "SourceId": "HPCProjectTemplate.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Configuration.UserSecrets.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\967303\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\5.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Configuration.UserSecrets.dll"
     },
     {
       "Identity": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
@@ -5166,6 +5183,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.HttpListener.dll"
+    },
+    {
+      "Identity": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\obj\\Debug\\net6.0\\build-gz\\JR3DGFA+.gz",
+      "SourceId": "HPCProjectTemplate.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Configuration.UserSecrets.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.UserSecrets.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.UserSecrets.dll"
     },
     {
       "Identity": "C:\\Users\\967303\\Desktop\\hpcfinal\\HPCProjectTemplate\\Client\\obj\\Debug\\net6.0\\build-gz\\jSaVPCbT.gz",

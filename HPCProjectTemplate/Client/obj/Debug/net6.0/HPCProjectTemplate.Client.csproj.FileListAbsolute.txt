@@ -833,3 +833,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCP
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\ref\HPCProjectTemplate.Client.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.pdb
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.UserSecrets.dll.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\JR3DGFA+.gz

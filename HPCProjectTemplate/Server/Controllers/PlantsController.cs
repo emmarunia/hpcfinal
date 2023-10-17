@@ -71,7 +71,7 @@ namespace HPCProjectTemplate.Server.Controllers
             user.FavoritePlants.Add(plant);
             _context.SaveChanges();
 
-            return Ok();
+            return Ok(plant);
         }
     }
 }

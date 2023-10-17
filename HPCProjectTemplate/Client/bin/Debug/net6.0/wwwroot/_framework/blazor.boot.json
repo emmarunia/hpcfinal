@@ -20,6 +20,7 @@
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-wNKhG3Ovx8jqxbscz2AALlsTLfI6GL2dyDhe63mSsoM=",
       "Microsoft.Extensions.Configuration.FileExtensions.dll": "sha256-n2fRP2\/1tGNzaCF5PU4hgTSlHK886OviBf2YAds3NdE=",
       "Microsoft.Extensions.Configuration.Json.dll": "sha256-R28\/ywLWxIcFxKtDIj0IxC+bXi4urX6BHeLL24R+vTQ=",
+      "Microsoft.Extensions.Configuration.UserSecrets.dll": "sha256-VZCaQ4Iu5kATRm0ACv0qbGleWR4KxnmjkZu5iJ6mRSQ=",
       "Microsoft.Extensions.DependencyInjection.dll": "sha256-KqgYK1NWqMxcNfw2Qah+gUhX2Nm+OZrHjyYDQ3VNCeA=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-nM2DA1GqKLxoPU+NHO\/Z5yQWH5ctJb+2Tu5b9VxIxeM=",
       "Microsoft.Extensions.FileProviders.Abstractions.dll": "sha256-7PzvEcQvpK1c8tTX9VPI8AF+XrekqbAytNBQXJjvTvQ=",
@@ -199,15 +200,15 @@
       "mscorlib.dll": "sha256-8gsZCli4blvSixx6l7jOPs3\/Icd8TC4GVabCZKrrlyY=",
       "netstandard.dll": "sha256-YYvWyuWZDvbYkOEXCJh3CXGfxZKLfGYkLGcbyGS\/8SE=",
       "System.Private.CoreLib.dll": "sha256-xE7O+QK3B2YX2noEPbRlUwDgBnmbLqp5sa62mE8asNE=",
-      "HPCProjectTemplate.Shared.dll": "sha256-aZvcvjj9r0mXyJxMv0zj4OexXc+NxzrsIvz7C8lWaos=",
-      "HPCProjectTemplate.Client.dll": "sha256-Rp9ZyJsLqC1thruhMyDEyZJaw8ueYR\/uS\/Gd7uWwd0E="
+      "HPCProjectTemplate.Shared.dll": "sha256-z3AJKPD+kEvVsNFu\/cCi6jvkxv7ao9X9hHz2GzEgQOI=",
+      "HPCProjectTemplate.Client.dll": "sha256-jlctERL0+ZqT2L9uGbrwE9XghriVtOniSB+QxAjb\/ZY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "HPCProjectTemplate.Shared.pdb": "sha256-PxAKLtWiv1PThjL\/Uy+HMt5RGFWpS72lZCCX2\/2X0qs=",
-      "HPCProjectTemplate.Client.pdb": "sha256-8nOdeFo\/NaittBU+mXxSCE9QLBeuNn7x5aR7Pjo5TB4="
+      "HPCProjectTemplate.Shared.pdb": "sha256-+VQcKnQd4afCSwY2v+Jd24Egh2KbDiCU+KA+hqMRzDc=",
+      "HPCProjectTemplate.Client.pdb": "sha256-mUw8OKJ1\/z4KQRDNgLUJ8sve9sV2Kst6GWhLlUjzQDo="
     },
     "runtime": {
       "dotnet.6.0.0.tj42mwroj7.js": "sha256-3lsl+fcPYo\/HEYgBtH9cXMGnIJ7BI\/rEsprbK6kAdIs=",
