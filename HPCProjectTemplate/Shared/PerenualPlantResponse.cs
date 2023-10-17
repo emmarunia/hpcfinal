@@ -26,6 +26,7 @@ namespace HPCProjectTemplate.Shared
         public string watering { get; set; }
         [JsonIgnore]
         public object[] depth_water_requirement { get; set; }
+        [JsonIgnore]
         public object[] volume_water_requirement { get; set; }
         public object watering_period { get; set; }
         public Watering_General_Benchmark watering_general_benchmark { get; set; }
@@ -72,8 +73,8 @@ namespace HPCProjectTemplate.Shared
         public class Dimensions
         {
             public string type { get; set; }
-            public int min_value { get; set; }
-            public int max_value { get; set; }
+            public double min_value { get; set; }
+            public double max_value { get; set; }
             public string unit { get; set; }
         }
 

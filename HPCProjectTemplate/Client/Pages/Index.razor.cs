@@ -23,12 +23,12 @@ namespace HPCProjectTemplate.Client.Pages
             var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
-                User = await Http.GetFromJsonAsync<UserDTO>($"api/get-plants?userName={UserAuth.Name}");
+                User = await Http.GetFromJsonAsync<UserDTO>($"api/get-user-plants?userName={UserAuth.Name}");
                 if (User is not null)
                 {
                     foreach (var plant in User.FavoritePlants)
                     {
-                        int id = plant.Id; //plant ID used for API call
+                        string id = plant.perenualId; //plant ID used for API call
                         PerenualPlantResponse perenualPlant = await Http.GetFromJsonAsync<PerenualPlantResponse>($"{perenualURL}{id}{perenualKEY}");
                         plants.Add(perenualPlant);
                     }

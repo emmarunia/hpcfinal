@@ -7,7 +7,12 @@
 @foreach (var plant in plants)
 {
     <div>
-        <p>@plant.common_name</p>
+        <p>
+            <a href="plant-details/@plant.id">@plant.common_name</a>
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button>
+        </p>
     </div>
 }
 

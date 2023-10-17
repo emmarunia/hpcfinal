@@ -1,0 +1,11 @@
+﻿@page "/products"
+<h3>Products</h3>
+
+@foreach (var product in products)
+{
+    <div>
+        <p>@product.name</p>
+        <p>@product.brand</p>
+        <p>$@product.price</p>
+    </div>
+}

@@ -10,7 +10,7 @@ namespace HPCProjectTemplate.Shared
 {
     public class PlantList
     {   
-        [JsonIgnore]
+        
         public int id { get; set; }
         
         public string common_name { get; set; }
