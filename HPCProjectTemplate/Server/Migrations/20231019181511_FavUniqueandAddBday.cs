@@ -4,13 +4,14 @@
 
 namespace HPCProjectTemplate.Server.Migrations
 {
-    public partial class ForceFavoritePlantUnique : Migration
+    public partial class FavUniqueandAddBday : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_Plants_AspNetUsers_ApplicationUserId",
                 table: "Plants");
+
             migrationBuilder.DropColumn(
                 name: "perenualId",
                 table: "Plants");
@@ -26,6 +27,12 @@ namespace HPCProjectTemplate.Server.Migrations
                 table: "Plants",
                 nullable: false);
 
+            migrationBuilder.AddColumn<string>(
+                name: "Birthday",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Plants_perenualId_ApplicationUserId",
@@ -51,6 +58,10 @@ namespace HPCProjectTemplate.Server.Migrations
             migrationBuilder.DropIndex(
                 name: "IX_Plants_perenualId_ApplicationUserId",
                 table: "Plants");
+
+            migrationBuilder.DropColumn(
+                name: "Birthday",
+                table: "AspNetUsers");
 
             migrationBuilder.AlterColumn<string>(
                 name: "perenualId",

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HPCProjectTemplate.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231018171824_ForceFavoritePlantUnique")]
-    partial class ForceFavoritePlantUnique
+    [Migration("20231019181511_FavUniqueandAddBday")]
+    partial class FavUniqueandAddBday
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -172,6 +172,10 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Birthday")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()

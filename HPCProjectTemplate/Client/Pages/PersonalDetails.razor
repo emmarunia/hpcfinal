@@ -1,0 +1,34 @@
+﻿@page "/personal"
+@using HPCProjectTemplate.Shared;
+
+@if (user is not null && user.Birthday is not "")
+{
+    <h3>@user.FirstName @user.LastName</h3>
+    <div>
+        <h1>Profile</h1>
+        <p>First Name: @user.FirstName</p>
+        <p>Last Name: @user.LastName</p>
+        <p>Email: @user.Email</p>
+        <p>Birthday:@user.Birthday</p>
+    </div>
+}
+
+@if (user is not null && user.Birthday is "")
+{
+    <h3>@user.FirstName @user.LastName</h3>
+    <div>
+        <h1>Profile</h1>
+        <p>First Name: @user.FirstName</p>
+        <p>Last Name: @user.LastName</p>
+        <p>Email: @user.Email</p>
+        <p>
+            Birthday: <input type="text" class="form-label" @bind="Birthday">
+            <button type="button" class="btn btn-primary" @onclick="() => AddBirthday()">Add Birthday</button>
+        </p>
+    </div>
+}
+
+@code {
+
+}
+
