@@ -4,11 +4,19 @@
 <h3>Plant Details for @plant.common_name</h3>
 
 <div>
-     <p>Cycle: @plant.cycle</p>
-     <p>Seeds: @plant.seeds</p>
-     <p>Produces flowers: @plant.flowers</p>
-     <p>
-        <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button>
-     </p>
+     <img src="@plant.default_image.thumbnail">
+     <p>@plant.description</p>
+     
+     @if (isFavorite == false){
+            <p>
+                <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button> 
+            </p>
+        }
+        else
+        {
+             <p>
+                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
+            </p>
+        }
 </div>
 
