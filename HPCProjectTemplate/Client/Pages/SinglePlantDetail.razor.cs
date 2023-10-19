@@ -26,19 +26,26 @@ namespace HPCProjectTemplate.Client.Pages
 
             var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
             if (UserAuth is not null && UserAuth.IsAuthenticated)
-            {
-
+            
 
                 //plants = await Http.GetFromJsonAsync<List<PlantList>>($"api/plant-details?plantId={plantId}");
                 
                 if (Int32.Parse(plantId) >0)
                 {            
                     plant = await Http.GetFromJsonAsync<PerenualPlantResponse>($"{perenualURL}{plantId}{perenualKEY}");
-                    
-                    
+                          
                 }
+        }
+        protected async Task AddFavorite(string plantId)
+        {
+            var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
+            //var User = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User;
 
+            //Plant plant = new Plant { perenualId = plantId };
 
+            if (UserAuth is not null && UserAuth.IsAuthenticated)
+            {
+                var result = await Http.GetFromJsonAsync<Plant>($"api/add-user-plant?userName={UserAuth.Name}&plantId={plantId}");
             }
 
 

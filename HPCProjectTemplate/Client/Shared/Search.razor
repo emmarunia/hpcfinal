@@ -10,9 +10,18 @@
         <p>
             <a href="plant-details/@plant.id">@plant.common_name</a>
         </p>
-        <p>
-            <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button>
-        </p>
+        @if (plant.isFavorite == false){
+            <p>
+                <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button> 
+            </p>
+        }
+        else
+        {
+             <p>
+                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
+            </p>
+        }
+
     </div>
 }
 

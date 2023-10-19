@@ -7,5 +7,8 @@
      <p>Cycle: @plant.cycle</p>
      <p>Seeds: @plant.seeds</p>
      <p>Produces flowers: @plant.flowers</p>
+     <p>
+        <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button>
+     </p>
 </div>
 

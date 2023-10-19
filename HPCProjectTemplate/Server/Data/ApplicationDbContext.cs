@@ -39,6 +39,8 @@ namespace HPCProjectTemplate.Server.Data
             builder.Entity<PlantList>()
                 .Property(m => m.thumbnail)
                 .IsRequired(false);
+            builder.Entity<Plant>()
+                .HasIndex(p => new { p.perenualId, p.ApplicationUserId }).IsUnique();
             builder.Entity<Product>()
                 .HasKey(p => p.id);
             builder.Entity<Product>().HasData(

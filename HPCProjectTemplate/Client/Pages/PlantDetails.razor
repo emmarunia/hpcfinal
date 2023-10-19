@@ -1,9 +1,10 @@
-﻿@using HPCProjectTemplate.Shared;
+﻿﻿@using HPCProjectTemplate.Shared;
 
 @if (Plant is not null)
 {
     <li>
-        <img src="@Plant.default_image.thumbnail">   @Plant.common_name 
+        <img src="@Plant.default_image.thumbnail">  <a href="plant-details/@Plant.id">@Plant.common_name</a>
+        
         <br />
         Sunlight amount: @Plant.sunlight[0]
         <br />

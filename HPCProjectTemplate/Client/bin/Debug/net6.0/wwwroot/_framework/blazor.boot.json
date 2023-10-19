@@ -7,6 +7,8 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Apache.NMS.dll": "sha256-5vrMbYzsCSSeOyJ\/pGbf5Sj5rSTclGnVkY3Lybu5PYw=",
+      "Apache.NMS.ActiveMQ.dll": "sha256-3XHIijUZsFsnFpDipiNeNl\/USiT\/13zP72YP3Nd2bK0=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-ODuGqSb\/EjQtAKtKGIHBUB8NM5h18TZENSXeu+IQyNk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-OHXy3+qxNjNPiVPhtM6knnUNVpcsVVAbYQzt9ymQykI=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-xbEcMmsZVcvk5fX+1SeXPguS4wF3qoU0hqW3MlQa6O0=",
@@ -33,6 +35,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH\/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
       "Microsoft.JSInterop.dll": "sha256-kUEKJnvyAqVl9UT00Q68zceNJZz6P1qZO+EXf4i61c8=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-Eh7KdjwbmVGTRNSYsrftwhWuXuPvYdIGlsDUtyEZRNg=",
+      "ICSharpCode.SharpZipLib.dll": "sha256-K4ug2pe2HVcvI0U5szV\/eavFCqkllm40Nfypq0yf828=",
       "System.IO.Pipelines.dll": "sha256-82Azhz6bwUir2bGFgxIgFUe0ecr6JTEuxlnxtWpds+I=",
       "Microsoft.CSharp.dll": "sha256-pG5sWcHprOr5bFK+veaST8aUnktNUyyrVwifTsXQYW0=",
       "Microsoft.VisualBasic.Core.dll": "sha256-lXzixR\/eOll9KoYXE6TRfHkToxdteu83COm5Ia9f28Y=",
@@ -200,15 +203,15 @@
       "mscorlib.dll": "sha256-8gsZCli4blvSixx6l7jOPs3\/Icd8TC4GVabCZKrrlyY=",
       "netstandard.dll": "sha256-YYvWyuWZDvbYkOEXCJh3CXGfxZKLfGYkLGcbyGS\/8SE=",
       "System.Private.CoreLib.dll": "sha256-xE7O+QK3B2YX2noEPbRlUwDgBnmbLqp5sa62mE8asNE=",
-      "HPCProjectTemplate.Shared.dll": "sha256-z3AJKPD+kEvVsNFu\/cCi6jvkxv7ao9X9hHz2GzEgQOI=",
-      "HPCProjectTemplate.Client.dll": "sha256-jlctERL0+ZqT2L9uGbrwE9XghriVtOniSB+QxAjb\/ZY="
+      "HPCProjectTemplate.Shared.dll": "sha256-ip+aLBYHlvQeraeFYPV95Gn++fAzxgxnFtryXEcApY0=",
+      "HPCProjectTemplate.Client.dll": "sha256-wXjy0QCNP7\/VdivISMLz0BePfPBt1wY5XtCP7d2TQco="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "HPCProjectTemplate.Shared.pdb": "sha256-+VQcKnQd4afCSwY2v+Jd24Egh2KbDiCU+KA+hqMRzDc=",
-      "HPCProjectTemplate.Client.pdb": "sha256-mUw8OKJ1\/z4KQRDNgLUJ8sve9sV2Kst6GWhLlUjzQDo="
+      "HPCProjectTemplate.Shared.pdb": "sha256-f0yt3L+gHK5V817Mh\/KRi5mx\/iIro1UlgY5z1PzE9N0=",
+      "HPCProjectTemplate.Client.pdb": "sha256-voTZDo5rC59PxmU1\/KXxYf7bVyW3CamU9YrgfdTA+kY="
     },
     "runtime": {
       "dotnet.6.0.0.tj42mwroj7.js": "sha256-3lsl+fcPYo\/HEYgBtH9cXMGnIJ7BI\/rEsprbK6kAdIs=",

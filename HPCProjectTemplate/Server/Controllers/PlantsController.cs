@@ -14,18 +14,45 @@ namespace HPCProjectTemplate.Server.Controllers
             _context = context;
         }
         [HttpGet("api/search-plants")]
-        public async Task<IActionResult> Search(string searchString)
+        public async Task<IActionResult> Search(string searchString, string userName)
         {
             if (_context.PlantList is null)
             {
                 return Problem("Entity set ApplicationDbContext.PlantList is null.");
             }
-            var plants =  from p in _context.PlantList
-                         select p;
-            if (!String.IsNullOrEmpty(searchString))
+            if (String.IsNullOrEmpty(searchString))
             {
-                plants = plants.Where(s => s.common_name!.Contains(searchString));
+                return Problem("String is empty");
             }
+                var userPlants = await _context.Users
+                                   .Include(p => p.FavoritePlants)
+                                   .Select(u => new UserDTO
+                                   {
+                                       Id = u.Id,
+                                       UserName = u.UserName,
+                                       FirstName = u.FirstName,
+                                       LastName = u.LastName,
+                                       FavoritePlants = u.FavoritePlants
+                                   }).FirstOrDefaultAsync(u => u.UserName == userName);
+            var favPlants = userPlants.FavoritePlants;
+            var plants = from p in _context.PlantList
+                         where p.common_name!.Contains(searchString)
+                         select p;
+
+            List<string> favPlantIds = new List<string>();
+            foreach(var plant in favPlants)
+            {
+                favPlantIds.Add(plant.perenualId);
+            }
+            foreach (var plant in plants)
+            {
+
+                if(favPlantIds.Contains(plant.id.ToString())){
+                    plant.isFavorite = true;
+                }
+            }
+          
+           
             return Ok(await plants.ToListAsync());
         }
         [HttpGet("api/plant-details")]
@@ -68,10 +95,32 @@ namespace HPCProjectTemplate.Server.Controllers
                               where u.UserName == userName
                               select u).FirstOrDefaultAsync();
             Plant plant = new Plant { perenualId = plantId };
-            user.FavoritePlants.Add(plant);
-            _context.SaveChanges();
+
+            try
+            {
+                user.FavoritePlants.Add(plant);
+                _context.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("You already have this plant in favorites!", ex);
+
+            }
+
 
             return Ok(plant);
         }
+        [HttpGet("api/remove-user-plant")]
+        public async Task<ActionResult<bool>> RemovePlant([FromQuery(Name = "userName")] string userName, [FromQuery] string plantId)
+        {
+            var plant =  _context.Users
+                                .Include(u => u.FavoritePlants)
+                                .FirstOrDefault(u => u.UserName == userName)
+                                .FavoritePlants.FirstOrDefault(p => p.perenualId == plantId);
+            _context.Plants.Remove(plant);
+            _context.SaveChanges();
+            return Ok(plant);
+        }
+
     }
 }

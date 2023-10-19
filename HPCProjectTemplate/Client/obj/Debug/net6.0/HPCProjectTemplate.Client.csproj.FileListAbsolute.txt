@@ -1,3 +1,11 @@
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.csproj.AssemblyReference.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.AssemblyInfoInputs.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.AssemblyInfo.cs
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.csproj.CoreCompileInputs.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Apache.NMS.ActiveMQ.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Apache.NMS.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.0.tj42mwroj7.js
@@ -7,6 +15,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\HPCProjectTemplate.Client.pdb
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\HPCProjectTemplate.Shared.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\HPCProjectTemplate.Shared.pdb
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\ICSharpCode.SharpZipLib.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\icudt.dat
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\icudt_CJK.dat
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\icudt_EFIGS.dat
@@ -25,6 +34,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -209,6 +219,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.Emit.ILGeneration.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Xml.XPath.XDocument.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.InteropServices.RuntimeInformation.dll.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\ICSharpCode.SharpZipLib.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Private.DataContractSerialization.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Collections.Concurrent.dll.gz
@@ -222,6 +233,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Handles.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Resources.Reader.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\dotnet.timezones.blat.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Apache.NMS.ActiveMQ.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.Encoding.CodePages.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Linq.Expressions.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Threading.Thread.dll.gz
@@ -230,6 +242,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Logging.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Loader.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Globalization.Calendars.dll.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Apache.NMS.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.Encoding.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\netstandard.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js.gz
@@ -300,6 +313,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Net.Http.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.TypeExtensions.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Net.HttpListener.dll.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.UserSecrets.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Security.Claims.dll.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\icudt_EFIGS.dat.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\System.Threading.Tasks.Extensions.dll.gz
@@ -411,6 +425,8 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\HPCP
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\HPCProjectTemplate.Client.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\ref\HPCProjectTemplate.Client.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\HPCProjectTemplate.Client.pdb
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Apache.NMS.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Apache.NMS.ActiveMQ.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
@@ -424,6 +440,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Micr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -436,6 +453,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Micr
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.JSInterop.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.CSharp.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.VisualBasic.Core.dll
@@ -612,12 +630,8 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\icud
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\icudt_no_CJK.dat
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\HPCProjectTemplate.Shared.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\HPCProjectTemplate.Shared.pdb
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.csproj.AssemblyReference.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.AssemblyInfoInputs.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.AssemblyInfo.cs
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.csproj.CoreCompileInputs.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\76XE6noM.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\35xXrQz3.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\OeVi1O5o.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\+HKKfNPT.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\dBl+FwGw.gz
@@ -631,6 +645,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\buil
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\62Bcp0sx.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\XDQDqCOn.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\ZJKC7MPm.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\JR3DGFA+.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\mwk8g8GO.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\P4+ycteL.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\xkvgsxyP.gz
@@ -643,6 +658,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\buil
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\f2xPJaR2.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\Vt4Qpm+O.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\phsaF5Tm.gz
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\+wMef2+F.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\lc+11dtw.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\uea+wybs.gz
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\98WYjdUi.gz
@@ -833,7 +849,3 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCP
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\ref\HPCProjectTemplate.Client.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\HPCProjectTemplate.Client.pdb
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.UserSecrets.dll
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.UserSecrets.dll.gz
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Client\obj\Debug\net6.0\build-gz\JR3DGFA+.gz

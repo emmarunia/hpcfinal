@@ -1,3 +1,11 @@
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.csproj.AssemblyReference.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.AssemblyInfoInputs.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.AssemblyInfo.cs
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.csproj.CoreCompileInputs.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.RazorAssemblyInfo.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.RazorAssemblyInfo.cs
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCProjectTemplate.Client.staticwebassets.runtime.json
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\appsettings.json
@@ -15,6 +23,8 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCP
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCProjectTemplate.Server.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\ref\HPCProjectTemplate.Server.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCProjectTemplate.Server.pdb
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\Apache.NMS.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\Apache.NMS.ActiveMQ.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\Duende.IdentityServer.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\Duende.IdentityServer.AspNetIdentity.dll
@@ -92,6 +102,7 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\NuGe
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\NuGet.ProjectModel.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\NuGet.Protocol.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\NuGet.Versioning.dll
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\SQLitePCLRaw.core.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -286,15 +297,6 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCP
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCProjectTemplate.Shared.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCProjectTemplate.Client.pdb
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\bin\Debug\net6.0\HPCProjectTemplate.Shared.pdb
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.csproj.AssemblyReference.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.AssemblyInfoInputs.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.AssemblyInfo.cs
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.csproj.CoreCompileInputs.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.RazorAssemblyInfo.cache
-C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.RazorAssemblyInfo.cs
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\scopedcss\bundle\HPCProjectTemplate.Server.styles.css
