@@ -245,15 +245,19 @@ namespace HPCProjectTemplate.Server.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ApplicationUserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("perenualId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("perenualId", "ApplicationUserId")
+                        .IsUnique();
 
                     b.ToTable("Plants");
                 });
@@ -617,7 +621,9 @@ namespace HPCProjectTemplate.Server.Migrations
                 {
                     b.HasOne("HPCProjectTemplate.Server.Models.ApplicationUser", null)
                         .WithMany("FavoritePlants")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

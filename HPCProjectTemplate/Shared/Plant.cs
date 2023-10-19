@@ -10,5 +10,6 @@ namespace HPCProjectTemplate.Shared
     {
         public int Id { get; set; }
         public string perenualId { get; set; } = String.Empty;
+        public string ApplicationUserId { get;  } 
     }
 }

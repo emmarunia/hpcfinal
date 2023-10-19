@@ -1,0 +1,14 @@
+﻿@page "/plant-details"
+@page "/plant-details/{plantId}"
+
+<h3>Plant Details for @plant.common_name</h3>
+
+<div>
+     <p>Cycle: @plant.cycle</p>
+     <p>Seeds: @plant.seeds</p>
+     <p>Produces flowers: @plant.flowers</p>
+     <p>
+        <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button>
+     </p>
+</div>
+

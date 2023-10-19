@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Json;
+using System.Security.Claims;
+using System.Security.Principal;
 
 namespace HPCProjectTemplate.Client.Shared
 {
@@ -20,21 +22,51 @@ namespace HPCProjectTemplate.Client.Shared
         {
             var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
             if (UserAuth is not null && UserAuth.IsAuthenticated)
-            {   
-                
-                //int id = plant.Id; //plant ID used for API call
-                plants = await Http.GetFromJsonAsync<List<PlantList>>($"api/search-plants?searchString={SearchText}");
+            {
 
-                
-                
+                //int id = plant.Id; //plant ID used for API call
+                plants = await Http.GetFromJsonAsync<List<PlantList>>($"api/search-plants?searchString={SearchText}&userName={UserAuth.Name}");
+
+
+
             }
         }
         protected async Task SearchClick()
         {
-            
-            plants = await Http.GetFromJsonAsync<List<PlantList>>($"api/search-plants?searchString={SearchText}");
+            var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
+            plants = await Http.GetFromJsonAsync<List<PlantList>>($"api/search-plants?searchString={SearchText}&userName={UserAuth.Name}");
 
          
+        }
+        
+        protected async Task AddFavorite(string plantId)
+        {
+            var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
+            //var User = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User;
+
+            //Plant plant = new Plant { perenualId = plantId };
+
+            if (UserAuth is not null && UserAuth.IsAuthenticated)
+            {
+                try
+                {
+                    var result = await Http.GetFromJsonAsync<Plant>($"api/add-user-plant?userName={UserAuth.Name}&plantId={plantId}");
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception("You already have this plant in favorites!", ex);
+                }
+            }
+
+            
+        }
+        private async Task RemovePlant(string plantId)
+        {
+            var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
+            if (UserAuth is not null && UserAuth.IsAuthenticated)
+            {
+                var result = await Http.GetFromJsonAsync<Plant>($"api/remove-user-plant?userName={UserAuth.Name}&plantId={plantId}");
+            }
         }
     }
 }

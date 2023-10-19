@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -10,7 +10,7 @@ namespace HPCProjectTemplate.Shared
 {
     public class PlantList
     {   
-        [JsonIgnore]
+        
         public int id { get; set; }
         
         public string common_name { get; set; }
@@ -30,7 +30,8 @@ namespace HPCProjectTemplate.Shared
         public string small_url { get; set; }
         public string thumbnail { get; set; }
 
-
+        [NotMapped]
+        public Boolean isFavorite { get; set; } = false;
 
     }
 }

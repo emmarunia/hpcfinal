@@ -6,6 +6,9 @@
         @foreach (HPCProjectTemplate.Shared.PerenualPlantResponse plant in plants)
         {
             <PlantDetails Plant=plant/>
+            <p>
+                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
+            </p>
         }
 </ul>
 }

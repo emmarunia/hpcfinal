@@ -4,9 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>ec916c46-80ce-4a9b-aea9-60fceef1ce86</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Apache.NMS.ActiveMQ" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.0" />
