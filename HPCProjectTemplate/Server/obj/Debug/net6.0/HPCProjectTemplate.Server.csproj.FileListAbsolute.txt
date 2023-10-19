@@ -305,3 +305,4 @@ C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCP
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\ref\HPCProjectTemplate.Server.dll
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.pdb
 C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.genruntimeconfig.cache
+C:\Users\967303\Desktop\hpcfinal\HPCProjectTemplate\Server\obj\Debug\net6.0\HPCProjectTemplate.Server.MvcApplicationPartsAssemblyInfo.cs
