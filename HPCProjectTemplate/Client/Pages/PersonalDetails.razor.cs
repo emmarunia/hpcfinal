@@ -38,6 +38,8 @@ namespace HPCProjectTemplate.Client.Pages
                 UserName = UserAuth.Name!;
                 var result = await Http.GetFromJsonAsync<UserDTO>($"api/add-birthday?UserName={UserName}&birthday={Birthday}");
             }
+            //automatically reloads page to home once change is made
+            Navigation.NavigateTo("/", forceLoad: true);
         }
     }
 
