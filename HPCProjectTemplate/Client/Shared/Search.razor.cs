@@ -1,9 +1,13 @@
 ﻿using HPCProjectTemplate.Shared;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Security.Claims;
 using System.Security.Principal;
+using System.Threading.Tasks;
 
 namespace HPCProjectTemplate.Client.Shared
 {
@@ -18,6 +22,7 @@ namespace HPCProjectTemplate.Client.Shared
         public string SearchText { get; set; } = string.Empty;
         
         public List<PlantList> plants { get; set; } = new List<PlantList>();
+        
         protected override async Task OnInitializedAsync()
         {
             var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;

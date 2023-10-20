@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Json;
+using static HPCProjectTemplate.Shared.PlantCareGuide;
+using static HPCProjectTemplate.Shared.PlantCareGuide.Data;
 
 namespace HPCProjectTemplate.Client.Pages
 {
@@ -22,6 +24,10 @@ namespace HPCProjectTemplate.Client.Pages
         private readonly string perenualURL = "https://perenual.com/api/species/details/";
         private readonly string perenualKEY = "?key=sk-28QO6524572d55f2e2357"; //Emma's API Key
 
+        private readonly string careURL = "https://www.perenual.com/api/species-care-guide-list";
+
+        public Section sunCareGuide { get; set; } = null;
+        public Section waterCareGuide { get; set; } = null;
         protected override async Task OnInitializedAsync()
         {
 
@@ -46,6 +52,7 @@ namespace HPCProjectTemplate.Client.Pages
                         }
                     }
                 }
+                GetPlantCare(plantId);
                     
 
             }
@@ -75,6 +82,20 @@ namespace HPCProjectTemplate.Client.Pages
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
                 var result = await Http.GetFromJsonAsync<Plant>($"api/remove-user-plant?userName={UserAuth.Name}&plantId={plantId}");
+            }
+        }
+        private async Task GetPlantCare(string plantId)
+        {
+            var temp = await Http.GetFromJsonAsync<PlantCareGuide>($"{careURL}{perenualKEY}&species_id={plantId}");
+            Section[] careGuides = temp.data.section;
+            foreach (Section guide in careGuides)
+            {
+                if (guide.type.Equals("sunlight")){
+                    sunCareGuide = guide;
+                }
+                if (guide.type.Equals("watering")){
+                    waterCareGuide = guide;
+                }
             }
         }
     }
