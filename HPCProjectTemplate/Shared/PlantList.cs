@@ -14,7 +14,8 @@ namespace HPCProjectTemplate.Shared
         public int id { get; set; }
         
         public string common_name { get; set; }
-        //public string scientific_name { get; set; }
+        [NotMapped]
+        public string[] scientific_name { get; set; }
         //public string other_name { get; set; }
         public string cycle { get; set; }
         public string watering { get; set; }

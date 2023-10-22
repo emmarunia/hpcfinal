@@ -1,32 +1,39 @@
 ﻿@page "/plant-details"
 @page "/plant-details/{plantId}"
 
-<h3>Plant Details</h3>
+@if (isLoading)
+{
+    <p>Loading ...</p>
+}
+else
+{
+<h3>Plant Details for @plant.common_name </h3>
 
 <div>
-     @*<img src="@plant.default_image.thumbnail">*@
-     <p>@plant.description</p>
-     
-     @if(sunCareGuide is not null)
-    {
-        <p>Sunlight care: @sunCareGuide.description</p>
-    }
-    @if(waterCareGuide is not null)
-    {
-        <p>Watering care: @waterCareGuide.description</p>
-    }
-
-
-     @if (isFavorite == false){
-            <p>
-                <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button> 
-            </p>
-        }
-        else
-        {
-             <p>
-                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
-            </p>
-        }
+    <img src="@plant.default_image.thumbnail" /> 
+    <p>@plant.description</p>
+    <p>Sunlight care: @sunCareGuide</p>
+    <p>Watering care: @waterCareGuide</p>
+    <p>The image below highlights regions where this plant thrives:</p>
+    <iframe frameborder=0 scrolling=yes seamless=seamless width="100%" height=550 style='margin:auto;' src='@plant.hardiness_location.full_url'></iframe>
+    
 </div>
+
+@if (isFavorite)
+{
+    <p>This is a favorite</p>
+    
+    <input type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())" value="Remove from favorites"></input>
+    
+}else{
+    <p>This is not a favorite</p>
+   
+    <input type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())" value="Add to favorites"></input> 
+    
+   
+}
+
+}
+
+
 

@@ -103,7 +103,7 @@ namespace HPCProjectTemplate.Server.Data
                     link = "https://a.co/d/8gtjYit",
                     imageURL = "https://m.media-amazon.com/images/I/71lQbCwk-PL._AC_SL1500_.jpg"
                 },
-                new Product { id = 16, name = "Indoor Plant Stand", brand = "PLantsHome", price = 20.99,
+                new Product { id = 16, name = "Indoor Plant Stand", brand = "PlantsHome", price = 20.99,
                     link = "https://a.co/d/i28n7fc",
                     imageURL = "https://m.media-amazon.com/images/I/61lUweEadvL._AC_SL1500_.jpg"
                 },

@@ -8,7 +8,7 @@ namespace HPCProjectTemplate.Shared;
 
 public class PlantSearchResult
 {
-    public PlantSearchResultItem[] Search { get; set; }
-    public string totalResults { get; set; }
-    public string Response { get; set; }
+    public List<PlantList> results{ get; set; }
+    public int totalResults { get; set; }
+    
 }

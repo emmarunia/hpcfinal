@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Json;
 using static HPCProjectTemplate.Shared.PlantCareGuide;
-using static HPCProjectTemplate.Shared.PlantCareGuide.Data;
+//using static HPCProjectTemplate.Shared.PlantCareGuide.Data;
 
 namespace HPCProjectTemplate.Client.Pages
 {
@@ -19,15 +19,17 @@ namespace HPCProjectTemplate.Client.Pages
         public PerenualPlantResponse plant { get; set; } = new PerenualPlantResponse();
         [Parameter]
         public string plantId { get; set; } = String.Empty;
-        public bool isFavorite { get; set; } = false;
+        public bool isFavorite { get; set; } = false; 
+        public bool isLoading { get; set; } = true;
+
 
         private readonly string perenualURL = "https://perenual.com/api/species/details/";
         private readonly string perenualKEY = "?key=sk-28QO6524572d55f2e2357"; //Emma's API Key
 
         private readonly string careURL = "https://www.perenual.com/api/species-care-guide-list";
 
-        public Section sunCareGuide { get; set; } = null;
-        public Section waterCareGuide { get; set; } = null;
+        public string sunCareGuide { get; set; } = String.Empty;
+        public string waterCareGuide { get; set; } = String.Empty;
         protected override async Task OnInitializedAsync()
         {
 
@@ -52,8 +54,10 @@ namespace HPCProjectTemplate.Client.Pages
                         }
                     }
                 }
-                GetPlantCare(plantId);
-                    
+
+                await GetPlantCare(plantId);
+
+                isLoading = false;
 
             }
             
@@ -87,14 +91,15 @@ namespace HPCProjectTemplate.Client.Pages
         private async Task GetPlantCare(string plantId)
         {
             var temp = await Http.GetFromJsonAsync<PlantCareGuide>($"{careURL}{perenualKEY}&species_id={plantId}");
-            Section[] careGuides = temp.data.section;
+            
+            Section[] careGuides = temp.data[0].section;
             foreach (Section guide in careGuides)
             {
                 if (guide.type.Equals("sunlight")){
-                    sunCareGuide = guide;
+                    sunCareGuide = guide.description;
                 }
                 if (guide.type.Equals("watering")){
-                    waterCareGuide = guide;
+                    waterCareGuide = guide.description;
                 }
             }
         }

@@ -1,34 +1,77 @@
 ﻿@page "/search"
 @page "/search/{searchText}"
 
-<input type="text" class="form-label" @bind="SearchText" /> 
-<button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
-
-@foreach (var plant in plants)
-{
-    <div>
-        <p>
-            <a href="plant-details/@plant.id">@plant.common_name</a>
-        </p>
-        @if (plant.isFavorite == false){
-            <p>
-                <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button> 
-            </p>
-        }
-        else
-        {
-             <p>
-                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
-            </p>
-        }
-
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" @bind="SearchText" /> 
     </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
+    </div>
+    <div class="col">
+        <select class="form-select" value="@pageSize" @onchange="PageSizeChange">
+            <option value="10">Show 10 rows</option>
+            <option value="20">Show 20 rows</option>
+            <option value="30">Show 30 rows</option>
+        </select>
+    </div>
+</div>
+
+
+
+
+
+
+<p>Total results found for @SearchText: @totalCount</p>
+<p>Viewing page @currPage of @totalPages</p>
+
+@if(currPage == 1 && currPage < totalPages)
+{
+    <button type="button" class="btn btn-primary" @onclick="NextPage">Next</button>
+}
+@if(currPage == totalPages && currPage != 1)
+{
+    <button type="button" class="btn btn-primary" @onclick="PrevPage">Previous</button>
+}
+@if(currPage > 1 && currPage < totalPages)
+{
+    <button type="button" class="btn btn-primary" @onclick="PrevPage">Previous</button>
+    <button type="button" class="btn btn-primary" @onclick="NextPage">Next</button>
 }
 
-@if (plants.Count <= 0)
+
+
+
+@if (isSearching)
+{
+    <p>Searching for "@SearchText" ...</p>
+
+}
+else if (plants.Count <= 0)
 {
     <p>No results found for @SearchText</p>
 
+}else{
+    @foreach (var plant in plants)
+    {
+        <div>
+            <p>
+                <a href="plant-details/@plant.id">@(plant.common_name.Substring(0,1).ToUpper())@(plant.common_name.Substring(1, plant.common_name.Length -1))</a>
+            </p>
+            @if (plant.isFavorite == false){
+                <p>
+                    <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button> 
+                </p>
+            }
+            else
+            {
+                 <p>
+                    <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
+                </p>
+            }
+
+        </div>
+    }
 }
 
 
