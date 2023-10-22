@@ -1,0 +1,10 @@
+﻿@inject NavigationManager Navigation
+@page "/enroll"
+<h3>Premium Membership</h3>
+
+<h1>Become a Premium Member Now</h1>
+
+<p>Click the button below to become a premium member!</p>
+<p>Premium members gain acess to our AI assistant and discounts within the store</p>
+<br />
+<button type="button" class="btn btn-primary" @onclick="() => becomePremiumMember(UserName)">Enroll!</button>

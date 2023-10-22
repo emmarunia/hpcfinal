@@ -4,6 +4,7 @@ using HPCProjectTemplate.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HPCProjectTemplate.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231020230304_nullablebirthday")]
+    partial class nullablebirthday
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -487,7 +489,7 @@ namespace HPCProjectTemplate.Server.Migrations
                         new
                         {
                             id = 16,
-                            brand = "PlantsHome",
+                            brand = "PLantsHome",
                             imageURL = "https://m.media-amazon.com/images/I/61lUweEadvL._AC_SL1500_.jpg",
                             link = "https://a.co/d/i28n7fc",
                             name = "Indoor Plant Stand",
