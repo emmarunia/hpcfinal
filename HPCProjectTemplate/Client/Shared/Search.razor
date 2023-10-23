@@ -2,13 +2,13 @@
 @page "/search/{searchText}"
 
 <div class="row">
-    <div class="col">
+    <div class="col-lg-2 col-xs-12">
         <input type="text" class="form-control" @bind="SearchText" /> 
     </div>
-    <div class="col">
+    <div class="col-lg-1 col-xs-12">
         <button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
     </div>
-    <div class="col">
+    <div class="col-lg-2 col-xs-12">
         <select class="form-select" value="@pageSize" @onchange="PageSizeChange">
             <option value="10">Show 10 rows</option>
             <option value="20">Show 20 rows</option>
@@ -19,11 +19,6 @@
 
 
 
-
-
-
-<p>Total results found for @SearchText: @totalCount</p>
-<p>Viewing page @currPage of @totalPages</p>
 
 @if(currPage == 1 && currPage < totalPages)
 {
@@ -52,6 +47,8 @@ else if (plants.Count <= 0)
     <p>No results found for @SearchText</p>
 
 }else{
+    <p>Total results found for @SearchText: @totalCount</p>
+    <p>Viewing page @currPage of @totalPages</p>
     @foreach (var plant in plants)
     {
         <div>
@@ -73,5 +70,27 @@ else if (plants.Count <= 0)
         </div>
     }
 }
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 

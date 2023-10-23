@@ -3,6 +3,9 @@
 
 html, body {
     font-family: 'Roboto', sans-serif;
+    
+}
+body.bgimage {
     background-image: url('/backgroundmain.jpg');
     background-size: cover;
 }

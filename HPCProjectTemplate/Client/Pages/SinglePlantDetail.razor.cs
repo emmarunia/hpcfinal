@@ -76,6 +76,7 @@ namespace HPCProjectTemplate.Client.Pages
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
                 var result = await Http.GetFromJsonAsync<Plant>($"api/add-user-plant?userName={UserAuth.Name}&plantId={plantId}");
+                StateHasChanged();
             }
 
 
@@ -86,6 +87,7 @@ namespace HPCProjectTemplate.Client.Pages
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
                 var result = await Http.GetFromJsonAsync<Plant>($"api/remove-user-plant?userName={UserAuth.Name}&plantId={plantId}");
+                StateHasChanged();
             }
         }
         private async Task GetPlantCare(string plantId)

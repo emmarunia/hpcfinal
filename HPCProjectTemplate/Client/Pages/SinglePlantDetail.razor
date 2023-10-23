@@ -7,31 +7,63 @@
 }
 else
 {
-<h3>Plant Details for @plant.common_name </h3>
+    <h3>Plant Details for @plant.common_name </h3>
 
-<div>
-    <img src="@plant.default_image.thumbnail" /> 
-    <p>@plant.description</p>
-    <p>Sunlight care: @sunCareGuide</p>
-    <p>Watering care: @waterCareGuide</p>
-    <p>The image below highlights regions where this plant thrives:</p>
-    <iframe frameborder=0 scrolling=yes seamless=seamless width="100%" height=550 style='margin:auto;' src='@plant.hardiness_location.full_url'></iframe>
-    
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" aria-controls="description" aria-selected="true">Description</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="sunlight-tab" data-toggle="tab" href="#sunlight" aria-controls="sunlight" aria-selected="false">Sunlight Care</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="watering-tab" data-toggle="tab" href="#watering" aria-controls="watering" aria-selected="false">Watering Care</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" aria-controls="map" aria-selected="false">Map</a>
+        </li>
+    </ul>
+   <div class="tab-content p-3 border-right border-left">
+    <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+        <dl class="row">
+            <p>@plant.description</p>
+        </dl>
+    </div>
+    <div class="tab-pane fade" id="sunlight" role="tabpanel" aria-labelledby="sunlight-tab">
+        <p>Sunlight care: @sunCareGuide</p>
+    </div>
+    <div class="tab-pane fade" id="watering" role="tabpanel" aria-labelledby="watering-tab">
+        <p>Watering care: @waterCareGuide</p>
+    </div>
+    <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+        <p>The image below highlights regions where this plant thrives:</p>
+        <iframe frameborder=0 scrolling=yes seamless=seamless width="100%" height=550 style='margin:auto;' src='@plant.hardiness_location.full_url'></iframe>
+    </div>
 </div>
 
-@if (isFavorite)
-{
-    <p>This is a favorite</p>
+    @*<div>
+        <img src="@plant.default_image.thumbnail" /> 
+        <p>@plant.description</p>
+        <p>Sunlight care: @sunCareGuide</p>
+        <p>Watering care: @waterCareGuide</p>
+        <p>The image below highlights regions where this plant thrives:</p>
+        <iframe frameborder=0 scrolling=yes seamless=seamless width="100%" height=550 style='margin:auto;' src='@plant.hardiness_location.full_url'></iframe>
     
-    <input type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())" value="Remove from favorites"></input>
+    </div>
+
+    @if (isFavorite)
+    {
+        <p>This is a favorite</p>
     
-}else{
-    <p>This is not a favorite</p>
+        <input type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())" value="Remove from favorites"></input>
+    
+    }else{
+        <p>This is not a favorite</p>
    
-    <input type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())" value="Add to favorites"></input> 
+        <input type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())" value="Add to favorites"></input> 
     
    
-}
+    }*@
 
 }
 
