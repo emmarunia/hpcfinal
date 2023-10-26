@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
-using DiscussionFix.Shared;
+using HPCProjectTemplate.Shared;
 
-namespace DiscussionFix.Client.Pages
+namespace HPCProjectTemplate.Client.Pages
 {
     public partial class DiscussionHome
     {

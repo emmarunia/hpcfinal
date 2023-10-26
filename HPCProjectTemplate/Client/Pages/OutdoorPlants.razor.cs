@@ -1,9 +1,9 @@
-﻿using DiscussionFix.Shared;
+﻿using HPCProjectTemplate.Shared;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
 
-namespace DiscussionFix.Client.Pages
+namespace HPCProjectTemplate.Client.Pages
 {
     public partial class OutdoorPlants
     {
