@@ -14,7 +14,7 @@ namespace HPCProjectTemplate.Server.Controllers
             _context = context;
         }
         [HttpGet("api/search-plants")]
-        public async Task<IActionResult> Search(string searchString, string userName)
+        public async Task<IActionResult> Search(string searchString, string userName, int skip = 0, int take=10)
         {
             if (_context.PlantList is null)
             {
@@ -24,6 +24,10 @@ namespace HPCProjectTemplate.Server.Controllers
             {
                 return Problem("String is empty");
             }
+
+            // count query store in int 
+            // return back in object
+
                 var userPlants = await _context.Users
                                    .Include(p => p.FavoritePlants)
                                    .Select(u => new UserDTO
@@ -35,9 +39,14 @@ namespace HPCProjectTemplate.Server.Controllers
                                        FavoritePlants = u.FavoritePlants
                                    }).FirstOrDefaultAsync(u => u.UserName == userName);
             var favPlants = userPlants.FavoritePlants;
-            var plants = from p in _context.PlantList
+
+            var numResults = (from p in _context.PlantList
+                             where p.common_name!.Contains(searchString)
+                             select p.id).ToList().Count;
+
+            var plants = (from p in _context.PlantList
                          where p.common_name!.Contains(searchString)
-                         select p;
+                         select p).Skip(skip).Take(take);
 
             List<string> favPlantIds = new List<string>();
             foreach(var plant in favPlants)
@@ -51,9 +60,9 @@ namespace HPCProjectTemplate.Server.Controllers
                     plant.isFavorite = true;
                 }
             }
-          
+            PlantSearchResult ps = new PlantSearchResult { results = plants.ToList(), totalResults = numResults };
            
-            return Ok(await plants.ToListAsync());
+            return Ok(ps);
         }
         [HttpGet("api/plant-details")]
         public async Task<IActionResult> GetDetails(int plantId)

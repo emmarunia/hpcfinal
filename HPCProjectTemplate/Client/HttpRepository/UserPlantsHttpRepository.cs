@@ -10,7 +10,7 @@
 //{
 //    public readonly HttpClient _httpClient;
 //    private readonly string perenualURL = "https://perenual.com/api/species/details/";
-//    private readonly string perenualKEY = "?key=sk-28QO6524572d55f2e2357"; //Emma's API Key
+//    private readonly string perenualKEY = "?key=sk-4uLE65397436b683c2357"; //Emma's API Key
 //    public UserPlantsHttpRepository(HttpClient httpClient)
 //    {
 //        _httpClient = httpClient;

@@ -1,7 +1,9 @@
 using HPCProjectTemplate.Client;
+using HPCProjectTemplate.Shared;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+
 //using HPCProjectTemplate.Client.HttpRepository;
 
 

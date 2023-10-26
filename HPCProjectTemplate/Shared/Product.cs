@@ -16,6 +16,7 @@ namespace HPCProjectTemplate.Shared
         public double price { get; set; }
         public string link { get; set; }
         public string imageURL { get; set; }
+        public string image2 { get; set; }
 
 
     }

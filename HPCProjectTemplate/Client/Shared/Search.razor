@@ -1,34 +1,146 @@
 ﻿@page "/search"
 @page "/search/{searchText}"
 
-<input type="text" class="form-label" @bind="SearchText" /> 
-<button type="button" class="btn btn-primary" @onclick="SearchClick">Search</button>
+<div class="mt-header">
+    <section id="team" class="team section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Find a Plant</h2>
+          <p>Search for your favorite plants here. Click -blank- to learn more about this plant, and click the heart to add to your favorites!</p>
+        </div>
+        <div class="d-flex justify-content-center justify-content-lg-start">
 
-@foreach (var plant in plants)
-{
-    <div>
-        <p>
-            <a href="plant-details/@plant.id">@plant.common_name</a>
-        </p>
-        @if (plant.isFavorite == false){
-            <p>
-                <button type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())">Add to favorites</button> 
-            </p>
+            <input type="text" class="form-control w-25" @bind="SearchText" placeholder="Search for a plant..."/>
+            <a href="javascript:void(0)" class="btn-get-started ms-2" @onclick="SearchClick">Search</a>
+            
+        </div>
+        <div class="row">
+        
+            <div class="col-lg-2 col-xs-12">
+                <select class="form-select" value="@pageSize" @onchange="PageSizeChange">
+                    <option value="10">Show 10 rows</option>
+                    <option value="20">Show 20 rows</option>
+                    <option value="30">Show 30 rows</option>
+                </select>
+            </div>
+        </div>
+
+    <ul class="pagination">
+        @if(totalPages == 1)
+        {
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+
+        } else if (currPage == 1)
+        {
+            <li class="page-item disabled">
+              <a class="page-link" href="javascript:void(0)" aria-label="Previous" aria-disabled="true">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            @for(int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(i)">@i</a>
+                </li>
+            }
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0)" aria-label="Next" @onclick="NextPage">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+        } else if (currPage == totalPages)
+        {
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0)" aria-label="Previous" @onclick="PrevPage">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            @for(int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(i)">@i</a>
+                </li>
+            }
+            <li class="page-item disabled">
+              <a class="page-link" href="javascript:void(0)" aria-label="Next" aria-aria-disabled="true">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
         }
         else
         {
-             <p>
-                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
-            </p>
+           <li class="page-item">
+              <a class="page-link" href="javascript:void(0)" aria-label="Previous" @onclick="PrevPage">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+             @for(int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(i)">@i</a>
+                </li>
+            }
+        <li class="page-item ">
+          <a class="page-link" href="javascript:void(0)" aria-label="Next" @onclick="NextPage">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li> 
         }
+        
+    </ul>
 
+
+
+
+    @if (isSearching)
+    {
+        <p>Searching for "@SearchText" ...</p>
+
+    }
+    else if (plants.Count <= 0)
+    {
+        <p>No results found for @SearchText</p>
+
+    }else{
+        <p>Total results found for @SearchText: @totalCount</p>
+        <p>Viewing page @currPage of @totalPages</p>
+        <div class="row">
+        @foreach (var plant in plants)
+        {
+            <div class="col-sm-4 mt-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">@(plant.common_name.Substring(0,1).ToUpper())@(plant.common_name.Substring(1, plant.common_name.Length -1))</h5>
+                    @if (plant.isFavorite == false){
+                        
+                        <p>
+                           <a href="javascript:void(0)" @onclick="() => AddFavorite(plant.id.ToString())"><i class="bx bx-heart" ></i></a>
+                           
+                            <a href="/plant-details/@plant.id"><i class="bx bx-info-circle" ></i></a>
+                        </p>
+                    }
+                    else
+                    {
+                         <p>
+                             <a href="javascript:void(0)" @onclick="() => RemovePlant(plant.id.ToString())"><i class="bx bxs-heart" ></i></a>
+                            
+                            <a href="/plant-details/@plant.id"><i class="bx bx-info-circle" ></i></a>
+                        </p>
+                    }
+                  
+                    
+                  </div>
+                </div>
+              </div>
+                
+
+          
+        }
+        </div>
+    }
     </div>
-}
-
-@if (plants.Count <= 0)
-{
-    <p>No results found for @SearchText</p>
-
-}
+    </section>
+    
+</div>
 
 

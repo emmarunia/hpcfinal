@@ -16,19 +16,13 @@ namespace HPCProjectTemplate.Client.Pages
 
         public List<PlantList> plants { get; set; } = new List<PlantList>();
         public string searchText { get; set; } = null!;
-        //protected override async Task OnInitializedAsync()
-        //{
-        //    var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
-        //    if (UserAuth is not null && UserAuth.IsAuthenticated)
-        //    {
 
-        //        //int id = plant.Id; //plant ID used for API call
-        //        plants = await Http.GetFromJsonAsync<List<PlantList>>($"api/search-plants?searchString={searchText}");
-
-
-
-        //    }
-        //}
+        public System.Security.Principal.IIdentity UserAuth { get; set; }
+        protected override async Task OnInitializedAsync()
+        {
+            UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
+           
+        }
         protected async Task SearchClick()
         {
             NavigationManager.NavigateTo("/search/" + searchText);

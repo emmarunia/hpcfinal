@@ -1,14 +1,33 @@
 ﻿@page "/favorites"
 
-@if (User is not null)
-{
-    <ul style="list-style-type:none">
-        @foreach (HPCProjectTemplate.Shared.PerenualPlantResponse plant in plants)
-        {
-            <PlantDetails Plant=plant/>
-            <p>
-                <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
-            </p>
-        }
-</ul>
-}
+<div class="mt-header">
+    <section id="team" class="team section-bg">
+      <div class="container">
+<div class="section-title">
+          <h2>My Favorite Plants</h2>
+          <p>Below are the plants that you have favorited! To remove a plant from favorites, click the X below the plant description. To get more details on your plant, click on the leaf.</p>
+        </div>
+
+        <div class="row">
+            @if (User is not null)
+                {
+                    @foreach (HPCProjectTemplate.Shared.PerenualPlantResponse plant in plants)
+                    {
+                        <PlantDetails Plant=plant/>
+                        @*<p>
+                            <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
+                        </p>*@
+
+                        
+                    }
+                }            
+        
+
+        </div>
+    </div>
+</section>
+    
+</div>
+
+
+
