@@ -2,78 +2,68 @@
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject NavigationManager Navigation
 
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm">
-    <div class="container">
-        <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <NavLink class="nav-link text-dark" style="background-color:transparent " href="" Match="NavLinkMatch.All">
-                        <span class="oi oi-home" aria-hidden="true"></span> Home
-                    </NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link text-dark" style="background-color:transparent" href="favorites">
-                        <span class="oi oi-plus" aria-hidden="true"></span> Favorite Plants
-                    </NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link text-dark" style="background-color:transparent" href="products">
-                        <span class="oi oi-list-rich" aria-hidden="true"></span> Products
-                    </NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link text-dark" style="background-color:transparent" href="personal">
-                        <span class="oi oi-person" aria-hidden="true"></span> MyProfile
-                    </NavLink>
-                    <AuthorizeView Roles="Admin">
-                        <Authorized>
-                            <li class="nav-item">
-                                <NavLink class="nav-link text-dark" style="background-color:transparent" href="admin">
-                                    <span class="oi oi-wrench" aria-hidden="true"></span>Admin
-                                </NavLink>
-                            </li>
-                        </Authorized>
-                    </AuthorizeView>
-                    <AuthorizeView Roles="Premium">
-                        <Authorized>
-                            <li class="nav-item">
-                                <NavLink class="nav-link text-dark" style="background-color:transparent" href="ai">
-                                    <span class="oi oi-fire" aria-hidden="true"></span>AI Assistant
-                                </NavLink>
-                            </li>
-                        </Authorized>
-                    </AuthorizeView>
-                    <AuthorizeView Roles="Standard">
-                        <Authorized>
-                            <li class="nav-item">
-                                <NavLink class="nav-link text-dark" style="background-color:transparent" href="enroll">
-                                    <span class="oi oi-star" aria-hidden="true"></span>Upgrade to Premium!
-                                </NavLink>
-                            </li>
-                        </Authorized>
-                    </AuthorizeView>
-                </li>
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top" style="background-color:#37517e">
+    <div class="container d-flex align-items-center ">
+
+      <!--<h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>-->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="/logo-words.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li>
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
+            </li>
+            <li>
+            <NavLink class="nav-link" href="favorites">Favorite Plants</NavLink>
+            </li>
+            <li>
+            <NavLink class="nav-link" href="products">Products</NavLink>
+            </li>
+            <li>
+            <NavLink class="nav-link" href="ai" >AI Chat</NavLink>
+            </li>
+           <li>
+            <NavLink class="nav-link" href="personal" >My Profile</NavLink>
+            </li>
+          @*<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
             </ul>
-        </div>
+          </li>*@
+          
+          <li><a class="getstarted" href="authentication/logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-</nav>
+  </header><!-- End Header -->
+
+
+
+
 
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    
 
     private void BeginLogOut()
     {
         Navigation.NavigateTo("authentication/logout");
     }
+    
 }

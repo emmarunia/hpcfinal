@@ -3,17 +3,29 @@
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject NavigationManager Navigation
 
-<header style="transform: translate3d(0px, 9%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="header">
-    <div class="page-padding">
-        <div class="container nav">
-            <img src="/logo2.png" style="float:left; width:150px; height:150px; margin-top:-85.66px; margin-left:16px">
-            <div>
-                <a href="authentication/register" style="text-align:center; float:right; padding:6px 10px; display:block; margin-top:8px; margin-right:16px; color:black">Sign-Up</a>
-                <button class="nav-link btn btn-link" style="float:right; padding:6px 10px; display:block; margin-top:8px; margin-right:16px; color:white; background-color:#00bf63; border:none; width:min-content; padding:6px; padding-left:40px; padding-right:40px; border-radius:20px" @onclick="BeginLogin">Login</button>
-            </div>
-        </div>
+
+<header id="header" class="fixed-top" style="background-color:#37517e">
+    <div class="container d-flex align-items-center ">
+
+      <!--<h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>-->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="/fulllogo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+            <li>
+            <NavLink class="nav-link" href="authentication/register">Sign Up</NavLink>
+            </li>
+
+          
+          <li><a class="getstarted" href="javascript:void(0)" @onclick="BeginLogin">Log In</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-</header>
+  </header><!-- End Header -->
 
 <div>
     <br /><br />

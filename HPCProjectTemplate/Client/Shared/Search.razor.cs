@@ -110,5 +110,10 @@ namespace HPCProjectTemplate.Client.Shared
             currPage--;
             this.SearchPlantAPI((currPage - 1) * pageSize, pageSize);
         }
+        private void GoToPage(int pageNum)
+        {
+            currPage = pageNum;
+            this.SearchPlantAPI((currPage - 1) * pageSize, pageSize);
+        }
     }
 }

@@ -1,58 +1,62 @@
 ﻿@page "/ai"
 
-
-
-<div class="container d-flex flex-column vh-100">
-    @if(Messages.Count == 0)
-    {
-        <div class="text-center">
-            <h3>AI Assistant</h3>
-
-            <h1>Let AI Help Cure Troublesome Plants</h1>
-
-            <p>Premium membership AI feature coming soon!</p>
+<div class="mt-header">
+    <section id="team" class="team section-bg">
+      <div class="container">   
+        <div class="section-title">
+          <h2>AI Assistant</h2>
+          <p>Let BioBloom Buddy Help You With All Your Plant Needs</p>
         </div>
-    }
-  
 
-    <div class="flex-grow-1">
+        <div class="row">
+            <div class="col-12 p-0 m-0">
+                @if (_isSendingMessage)
+                {
+                    <div class="text-center">
+                        <div class="spinner-border spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
+                <div class="input-group">
+                    <button class="btn btn-primary">
+                        <span class="bi bi-eraser fs-4"></span>
+                    </button>
+                    <textarea rows="2" class="form-control" placeholder="Ask your question..."
+                        @bind-value="_userQuestion" @bind-value:event="oninput" @onkeypress="HandleKeyPress"
+                        disabled="@_isSendingMessage">        
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        
+            
         @foreach(var message in Messages)
         {
-        <div class="row p-2">
-            <div class="col-1 rounded-circle bg-dark-subtle text-center m-2 p-0" style="width:50px;height:50px;">
-                <span class="bi fs-2 @(message.IsUser ? "bi-person-fill":"bi-robot")"></span>
-            </div>
-            <div class="col-11 rounded p-2 shadow-sm @(message.IsUser ? "bg-primary text-light":"bg-light")">
+            <div class="row mt-4">
+                
+                <div class="col-12 rounded p-3 shadow-sm @(message.IsUser ? "bg-primary text-light":"bg-light")">
+                       
                     @if (message.IsUser)
                     {
-                        @message.content
+                        <i class="bx bx-user-circle me-3  fs-4"></i> 
+                        <span class="fs-5">@message.content</span>
                     }else{
-                        @((MarkupString)message.content)
+                        <i class="bx bx-bot me-3 fs-4"></i> 
+                        <span class="fs-5">@((MarkupString)message.content)</span>
+                        
                     }
-            </div>
-        </div>
-        }
-    </div>
-    <div class="sticky-bottom w-50 p-3 rounded mx-auto">
-        @if (_isSendingMessage)
-        {
-            <div class="text-center">
-                <div class="spinner-border spinner-border-sm" role="status">
-                    <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
         }
-        <div class="input-group">
-            <button class="btn btn-primary">
-                <span class="bi bi-eraser"></span>
-            </button>
-            <textarea rows="2" class="form-control" placeholder="Ask your question..."
-                @bind-value="_userQuestion" @bind-value:event="oninput" @onkeypress="HandleKeyPress"
-                disabled="@_isSendingMessage">        
-            </textarea>
-        </div>
+                           
         
+
     </div>
+</section>
+    
 </div>
+
+
 
 

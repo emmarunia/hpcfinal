@@ -16,5 +16,7 @@ namespace HPCProjectTemplate.Server.Models
         public string? Birthday { get; set; }
 
         public List<Plant> FavoritePlants { get; set; } = new();
+        //public List<Posts> Posts { get; set; } = new();
+        //public List<Replies> Replies { get; set } = new();
     }
 }

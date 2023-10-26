@@ -2,7 +2,26 @@
 
 @if (Plant is not null)
 {
-    <li>
+    <div class="col-lg-6 mb-4">
+
+        <div class="member d-flex align-items-start">
+            <div class="pic"><img src="@Plant.default_image.thumbnail" class="img-fluid" alt=""></div>
+            <div class="member-info">
+            <h4>@(Plant.common_name.Substring(0,1).ToUpper())@(Plant.common_name.Substring(1, Plant.common_name.Length -1))</h4>
+            <span>@Plant.scientific_name[0]</span>
+            <p>@(Plant.description.Length <= 80 ? Plant.description : Plant.description.Substring(0,80) + "...")</p>
+ 
+            <div class="social">
+                <a @onclick="() => RemovePlant(Plant.id.ToString())" href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove Plant"><i class="bx ri-close-fill"></i></a>
+                <a href="plant-details/@Plant.id" data-bs-toggle="tooltip" data-bs-placement="top" title="View Details"><i class="bx ri-leaf-fill" ></i></a>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+
+        
+@*    <li>
         <img src="@Plant.default_image.thumbnail">  <a href="plant-details/@Plant.id">@Plant.common_name</a>
         
         <br />
@@ -11,10 +30,24 @@
         Watering amount: @Plant.watering
         <br />
         Care level:@Plant.care_level
-    </li>
+    </li>*@
 }
 
 @code {
     [Parameter]
     public PerenualPlantResponse? Plant { get; set; } = null;
+    [Inject]
+       public AuthenticationStateProvider AuthenticationStateProvider { get; set; } = null!;
+
+    [Inject]
+    public HttpClient Http { get; set; } = null!;
+    private async Task RemovePlant(string plantId)
+        {
+            var UserAuth = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity;
+            if (UserAuth is not null && UserAuth.IsAuthenticated)
+            {
+                var result = await Http.GetFromJsonAsync<Plant>($"api/remove-user-plant?userName={UserAuth.Name}&plantId={plantId}");
+                
+            }
+        }
 }

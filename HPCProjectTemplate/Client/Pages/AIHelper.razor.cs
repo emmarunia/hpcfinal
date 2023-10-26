@@ -16,7 +16,7 @@ namespace HPCProjectTemplate.Client.Pages
         private readonly string _chatBotKnowledgeScope = "" +
             "Your name is BioBloom Buddy. You should only answer questions about plants and how to care for them." +
             "Politely decline to answer other questions." +
-            "Answer all your questions like a famous australian outback explorer";
+            "Answer all your questions like a famous australian outback explore";
         [Inject]
         public AuthenticationStateProvider AuthenticationStateProvider { get; set; } = null!;
 
