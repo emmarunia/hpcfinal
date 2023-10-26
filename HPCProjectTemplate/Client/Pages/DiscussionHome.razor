@@ -1,0 +1,50 @@
+﻿@page "/community"
+@inject NavigationManager Navigation
+
+<h3>Welcome to the Community Page!</h3>
+<p>Click on a topic to get help with troublesome plants</p>
+
+<table class="table table-hover" id="forumIndexTable">
+    <tr>
+        <th>Topic</th>
+        <th>Description</th>
+    </tr>
+    <tbody>
+        @foreach (DiscussionFix.Shared.Topics topic in Topics)
+        {
+            <tr>
+                <td>
+                    <button style="background:none; border:none; padding:0; color:#069; text-decoration:underline;" @onclick="() => ChoosePage(topic.Id)">@topic.Title</button> 
+                </td>
+                <td>
+                    @topic.Description
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    void ChoosePage(int id)
+    {
+        switch (id)
+        {
+            case 1:
+                Navigation.NavigateTo("/gardening");
+                break;
+            case 2:
+                Navigation.NavigateTo("/indoor/plants");
+                break;
+            case 3:
+                Navigation.NavigateTo("/outdoor/plants");
+                break;
+            case 4:
+                Navigation.NavigateTo("/regional/plants");
+                break;
+            case 5:
+                Navigation.NavigateTo("/gardening/adjacent");
+                break;
+        }
+
+    }
+}
