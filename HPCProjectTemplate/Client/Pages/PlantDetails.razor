@@ -47,7 +47,9 @@
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
                 var result = await Http.GetFromJsonAsync<Plant>($"api/remove-user-plant?userName={UserAuth.Name}&plantId={plantId}");
-                
+                await this.HandleFavorite.InvokeAsync(plantId);
             }
         }
+    [Parameter]
+    public EventCallback<string> HandleFavorite { get; set; }
 }

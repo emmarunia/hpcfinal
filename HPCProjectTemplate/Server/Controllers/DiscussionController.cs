@@ -3,6 +3,7 @@ using HPCProjectTemplate.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace HPCProjectTemplate.Server.Controllers
 {
     public class DiscussionController : Controller
@@ -16,8 +17,11 @@ namespace HPCProjectTemplate.Server.Controllers
         [HttpPost("api/add-post")]
         public async Task AddPost([FromBody] Posts Post)
         {
+    
             _context.Posts.Add(Post);
-            _context.SaveChanges();
+            
+            var res = _context.SaveChanges();
+            int temp = 1;
         }
 
         [HttpPost("api/reply")]

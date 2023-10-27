@@ -1,29 +1,41 @@
 ﻿@page "/create/post"
 @inject NavigationManager Navigation
 
-<div class="mt-header">
-    <h3>Create New Post</h3>
 
-<form class="AddPost">
-    <label>Choose Topic</label>
-    <select class="form-control" @bind="Topic">
-        <option>Gardening</option>
-        <option>Indoor Plants</option>
-        <option>Outdoor Plants</option>
-        <option>Regional Plants</option>
-        <option>Gardening Adjacent</option>
-    </select>
-    <div class="form-group">
-        <label>Topic</label>
-        <input class="form-control" @bind="Title" />
-    </div>
-    <div class="form-group">
-        <label>Post</label>
-        <textarea class="form-control" @bind="Content"></textarea>
-        <input type="hidden" @bind="Time" />
-    </div>
-    <br />
-    <button type="button" class="btn btn-primary" @onclick="() => AddPost()">Submit Post</button>
-</form>
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
 
-</div>
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Create Post</h3>
+            <p>Add your post to a community board below. Make sure to put it in the most appropriate topic to ensure a timely and helpful response!</p>
+             <p>Choose Topic</p>
+            <select class="form-control" @bind="Topic">
+                <option>Gardening</option>
+                <option>Indoor Plants</option>
+                <option>Outdoor Plants</option>
+                <option>Regional Plants</option>
+                <option>Gardening Adjacent</option>
+            </select>
+            <br />
+            <div class="form-group">
+                <p>Title</p>
+                <input class="form-control" @bind="Title" />
+            </div>
+            <br />
+            <div class="form-group">
+                <p>Post</p>
+                <textarea class="form-control" @bind="Content"></textarea>
+                <input type="hidden" @bind="Time" />
+            </div>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="javascript:void(0)" @onclick="AddPost">Submit Post</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
+

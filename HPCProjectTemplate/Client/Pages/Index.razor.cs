@@ -64,5 +64,10 @@ namespace HPCProjectTemplate.Client.Pages
                 var result = await Http.GetFromJsonAsync<Plant>($"api/remove-user-plant?userName={UserAuth.Name}&plantId={plantId}");
             }
         }
+        private void RemoveFavorite(string plantId)
+        {
+            var item = plants.Find(m => m.id.ToString()==plantId);
+            plants.Remove(item);
+        }
     }
 }

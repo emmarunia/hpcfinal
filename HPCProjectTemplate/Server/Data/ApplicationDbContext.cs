@@ -18,7 +18,9 @@ namespace HPCProjectTemplate.Server.Data
         {
             base.OnModelCreating(builder);
 
-            
+            builder.Entity<Posts>().
+                HasKey(p => p.Id);
+
             builder.Entity<PlantList>()
                 .Property(m => m.license_name)
                 .IsRequired(false);

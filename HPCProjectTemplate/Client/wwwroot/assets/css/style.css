@@ -671,6 +671,7 @@ section {
 
 .why-us .accordion-list {
   padding: 0 100px 60px 100px;
+  padding: 0 100px 60px 100px;
 }
 
 .why-us .accordion-list ul {
@@ -876,9 +877,9 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("https://c.pxhere.com/photos/49/00/field_corn_air_frisch_agriculture_cornfield_harvest_summer-572515.jpg!d") fixed center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 186px 0;
 }
 
 .cta h3 {

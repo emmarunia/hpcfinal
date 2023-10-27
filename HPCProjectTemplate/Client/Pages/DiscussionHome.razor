@@ -13,9 +13,9 @@
         <div class="row">
             @foreach (HPCProjectTemplate.Shared.Topics topic in Topics)
                 {
-                    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-5" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-4 col-md-6 mt-4" data-aos="zoom-in" data-aos-delay="100">
                         @if(topic.Id ==1){
-                            <div class="icon-box">
+                          <div class="icon-box">
                           <div class="icon"><i class="bi bi-flower2"></i></div>
                           <h4><a href="javascript:void(0)" @onclick="() => ChoosePage(topic.Id)">@topic.Title</a></h4>
                           <p>@topic.Description</p>
@@ -70,19 +70,19 @@
         switch (id)
         {
             case 1:
-                Navigation.NavigateTo("/gardening");
+                Navigation.NavigateTo("/community/gardening");
                 break;
             case 2:
-                Navigation.NavigateTo("/indoor/plants");
+                Navigation.NavigateTo("/community/indoor/plants");
                 break;
             case 3:
-                Navigation.NavigateTo("/outdoor/plants");
+                Navigation.NavigateTo("/community/outdoor/plants");
                 break;
             case 4:
-                Navigation.NavigateTo("/regional/plants");
+                Navigation.NavigateTo("/community/regional/plants");
                 break;
             case 5:
-                Navigation.NavigateTo("/gardening/adjacent");
+                Navigation.NavigateTo("/community/gardening/adjacent");
                 break;
         }
 

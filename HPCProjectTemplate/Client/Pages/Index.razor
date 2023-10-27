@@ -13,7 +13,7 @@
                 {
                     @foreach (HPCProjectTemplate.Shared.PerenualPlantResponse plant in plants)
                     {
-                        <PlantDetails Plant=plant/>
+                        <PlantDetails Plant=plant HandleFavorite=@this.RemoveFavorite/>
                         @*<p>
                             <button type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())">Remove from favorites</button>
                         </p>*@
