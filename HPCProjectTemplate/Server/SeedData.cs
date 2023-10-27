@@ -38,7 +38,11 @@ public static class SeedData
                     {
                         context.PlantList.Add(plant);
                     }
+                    context.Database.OpenConnection();
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[PlantList] ON");
                     context.SaveChanges();
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[PlantList] OFF");
+                    context.Database.CloseConnection();
                 }
 
             }

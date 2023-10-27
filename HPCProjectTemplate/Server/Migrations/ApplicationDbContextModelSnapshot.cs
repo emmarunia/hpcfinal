@@ -105,7 +105,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasIndex("Use");
 
-                    b.ToTable("Keys");
+                    b.ToTable("Keys", (string)null);
                 });
 
             modelBuilder.Entity("Duende.IdentityServer.EntityFramework.Entities.PersistedGrant", b =>
@@ -262,7 +262,7 @@ namespace HPCProjectTemplate.Server.Migrations
                     b.HasIndex("perenualId", "ApplicationUserId")
                         .IsUnique();
 
-                    b.ToTable("Plants");
+                    b.ToTable("Plants", (string)null);
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.PlantList", b =>
@@ -314,7 +314,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("PlantList");
+                    b.ToTable("PlantList", (string)null);
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.Posts", b =>
@@ -345,7 +345,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.Product", b =>
@@ -381,7 +381,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
 
                     b.HasData(
                         new
@@ -632,7 +632,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasIndex("PostsId");
 
-                    b.ToTable("Replies");
+                    b.ToTable("Replies", (string)null);
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.Topics", b =>
@@ -651,7 +651,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Topics");
+                    b.ToTable("Topics", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

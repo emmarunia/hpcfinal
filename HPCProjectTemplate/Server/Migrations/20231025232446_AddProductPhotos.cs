@@ -17,7 +17,7 @@ namespace HPCProjectTemplate.Server.Migrations
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     price = table.Column<double>(type: "float", nullable: false),
-                    link = table.Column<string>(type: "nvarchar(max)", nullable:false),
+                    link = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     imageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     image2 = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
