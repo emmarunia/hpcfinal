@@ -4,6 +4,7 @@ using HPCProjectTemplate.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HPCProjectTemplate.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231026172956_AddCommunityTables")]
+    partial class AddCommunityTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,7 +107,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasIndex("Use");
 
-                    b.ToTable("Keys", (string)null);
+                    b.ToTable("Keys");
                 });
 
             modelBuilder.Entity("Duende.IdentityServer.EntityFramework.Entities.PersistedGrant", b =>
@@ -262,7 +264,7 @@ namespace HPCProjectTemplate.Server.Migrations
                     b.HasIndex("perenualId", "ApplicationUserId")
                         .IsUnique();
 
-                    b.ToTable("Plants", (string)null);
+                    b.ToTable("Plants");
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.PlantList", b =>
@@ -314,7 +316,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("PlantList", (string)null);
+                    b.ToTable("PlantList");
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.Posts", b =>
@@ -345,7 +347,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Posts", (string)null);
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.Product", b =>
@@ -381,7 +383,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
 
                     b.HasData(
                         new
@@ -632,7 +634,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasIndex("PostsId");
 
-                    b.ToTable("Replies", (string)null);
+                    b.ToTable("Replies");
                 });
 
             modelBuilder.Entity("HPCProjectTemplate.Shared.Topics", b =>
@@ -651,7 +653,7 @@ namespace HPCProjectTemplate.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Topics", (string)null);
+                    b.ToTable("Topics");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

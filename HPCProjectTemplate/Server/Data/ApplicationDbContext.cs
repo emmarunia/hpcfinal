@@ -160,6 +160,9 @@ namespace HPCProjectTemplate.Server.Data
         public virtual DbSet<PlantList> PlantList { get; set; }
 
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Posts> Posts { get; set; }
+        public virtual DbSet<Replies> Replies { get; set; }
+        public virtual DbSet<Topics> Topics { get; set; }
 
     }
 }

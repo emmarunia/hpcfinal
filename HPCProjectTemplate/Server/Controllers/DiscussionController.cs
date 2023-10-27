@@ -1,9 +1,9 @@
-﻿using DiscussionFix.Server.Data;
-using DiscussionFix.Shared;
+﻿using HPCProjectTemplate.Server.Data;
+using HPCProjectTemplate.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DiscussionFix.Server.Controllers
+namespace HPCProjectTemplate.Server.Controllers
 {
     public class DiscussionController : Controller
     {

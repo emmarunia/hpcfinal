@@ -10,12 +10,12 @@ namespace HPCProjectTemplate.Server.Migrations
         {
            
 
-            migrationBuilder.AddColumn<string>(
-                name: "Birthday",
-                table: "AspNetUsers",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
+            //migrationBuilder.AddColumn<string>(
+            //    name: "Birthday",
+            //    table: "AspNetUsers",
+            //    type: "nvarchar(max)",
+            //    nullable: false,
+            //    defaultValue: "");
 
             
         }
@@ -24,9 +24,9 @@ namespace HPCProjectTemplate.Server.Migrations
         {
            
 
-            migrationBuilder.DropColumn(
-                name: "Birthday",
-                table: "AspNetUsers");
+            //migrationBuilder.DropColumn(
+            //    name: "Birthday",
+            //    table: "AspNetUsers");
 
 
 
