@@ -87,6 +87,29 @@ namespace HPCProjectTemplate.Server.Controllers
             };
 
             return Ok(postList);
-        }  
+        }
+        [HttpGet("api/get-replies")]
+        public async Task<ActionResult<RepliesList>> GetReplies()
+        {
+
+            var reply = _context.Replies
+                .Select(reply => new Replies
+                {
+                    Id = reply.Id,
+                    ImageUrl = reply.ImageUrl,
+                    Content = reply.Content,
+                    Title = reply.Title,
+                    Created = reply.Created,
+                    PostId = reply.PostId,
+                    UserName = reply.UserName
+                });
+
+            var replyList = new RepliesList()
+            {
+                ListOfReplies = reply
+            };
+
+            return Ok(replyList);
+        }
     }
 }

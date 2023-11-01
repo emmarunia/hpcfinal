@@ -6,12 +6,12 @@
       <div class="container">
         <div class="section-title">
           <h2>Find a Plant</h2>
-          <p>Search for your favorite plants here. Click -blank- to learn more about this plant, and click the heart to add to your favorites!</p>
+          <p>Search for your favorite plants here. Click get details to learn more about this plant, and click the heart to add to your favorites!</p>
         </div>
         <div class="d-flex justify-content-center justify-content-lg-start">
 
             <input type="text" class="form-control w-25" @bind="SearchText" placeholder="Search for a plant..."/>
-            <a href="javascript:void(0)" class="btn-get-started ms-2" @onclick="SearchClick">Search</a>
+            <a href="javascript:void(0)" class="btn btn-info ms-2" @onclick="SearchClick">Search <i class="bx bx-search" ></i></a>
             
         </div>
         <div class="row">
@@ -39,8 +39,9 @@
             </li>
             @for(int i = 1; i <= totalPages; i++)
             {
+                int locali = i;
                 <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(i)">@i</a>
+                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(locali)">@i</a>
                 </li>
             }
             <li class="page-item">
@@ -57,8 +58,9 @@
             </li>
             @for(int i = 1; i <= totalPages; i++)
             {
+                int locali = i;
                 <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(i)">@i</a>
+                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(locali)">@i</a>
                 </li>
             }
             <li class="page-item disabled">
@@ -76,8 +78,9 @@
             </li>
              @for(int i = 1; i <= totalPages; i++)
             {
+                int locali = i;
                 <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(i)">@i</a>
+                    <a class="page-link" href="javascript:void(0)" @onclick="() =>GoToPage(locali)">@i</a>
                 </li>
             }
         <li class="page-item ">
@@ -104,39 +107,42 @@
     }else{
         <p>Total results found for @SearchText: @totalCount</p>
         <p>Viewing page @currPage of @totalPages</p>
-        <div class="row">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Favorite</th>
+              <th scope="col">Plant Name</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
         @foreach (var plant in plants)
         {
-            <div class="col-sm-4 mt-4">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">@(plant.common_name.Substring(0,1).ToUpper())@(plant.common_name.Substring(1, plant.common_name.Length -1))</h5>
-                    @if (plant.isFavorite == false){
-                        
-                        <p>
-                           <a href="javascript:void(0)" @onclick="() => AddFavorite(plant.id.ToString())"><i class="bx bx-heart" ></i></a>
-                           
-                            <a href="/plant-details/@plant.id"><i class="bx bx-info-circle" ></i></a>
-                        </p>
+            <tbody>
+            <tr>
+              <td>
+               @if (plant.isFavorite == false){
+                        <a href="javascript:void(0)" @onclick="() => AddFavorite(plant.id.ToString())" class="mt-4"><i class="bx bx-heart fs-4" ></i></a>
                     }
                     else
                     {
-                         <p>
-                             <a href="javascript:void(0)" @onclick="() => RemovePlant(plant.id.ToString())"><i class="bx bxs-heart" ></i></a>
-                            
-                            <a href="/plant-details/@plant.id"><i class="bx bx-info-circle" ></i></a>
-                        </p>
+                        <a href="javascript:void(0)" @onclick="() => RemovePlant(plant.id.ToString())" class="mt-4"><i class="bx bxs-heart fs-4" ></i></a>
                     }
-                  
-                    
-                  </div>
-                </div>
-              </div>
+                </td>
+              <td width="80%">@(plant.common_name.Substring(0,1).ToUpper())@(plant.common_name.Substring(1, plant.common_name.Length -1))</td>
+              <td><a class="btn btn-info" href="/plant-details/@plant.id"><i class="bx bx-info-circle" ></i> Get Details</a></td>
+            </tr>
+            
+           
+          </tbody>
+         
                 
 
           
         }
-        </div>
+        
+          
+        </table>
+       
     }
     </div>
     </section>

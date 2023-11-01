@@ -37,8 +37,7 @@ namespace HPCProjectTemplate.Client.Pages
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
                 await Http.PostAsJsonAsync($"api/reply", Rep);
-                await Http.PostAsJsonAsync($"api/add-reply-to-post", Rep);
-                await Http.PostAsJsonAsync($"api/add-post", Rep);
+                
                 //var result = await Http.GetFromJsonAsync<Replies>($"api/add-reply-to-post?rep={Rep}");
             }
 

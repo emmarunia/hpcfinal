@@ -1,76 +1,218 @@
 ﻿@page "/plant-details"
 @page "/plant-details/{plantId}"
 
-<div class="mt-header">
-    @if (isLoading)
+    <div class="container">
+         @if (isLoading)
     {
         <p>Loading ...</p>
     }
     else
     {
-        <div class="section-title">
-          <h2>Plant Information for @plant.common_name</h2>
-          <p>Here you can find detailed information on your plant, including a general description, care guidelines for both watering and sunlight, and a map of the best climates for your plant. Click through the tabs to learn more!</p>
+        <div class="mt-header">
+
+            <div class="section-title">
+              <h2>Plant Information for @plant.common_name</h2>
+              <p>Here you can find detailed information on your plant, care guidelines for both watering and sunlight, and a map of the best climates for your plant. Click through the tabs to learn more!</p>
+            </div>
         </div>
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-pills" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" aria-controls="description" aria-selected="true">Description</a>
+                <a class="nav-link active" id="description-tab" data-bs-toggle="pill" data-bs-target="#description" href="javascript:void(0)" aria-controls="description" aria-selected="true">Description</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sunlight-tab" data-toggle="tab" href="#sunlight" aria-controls="sunlight" aria-selected="false">Sunlight Care</a>
+                <a class="nav-link" id="details-tab" data-bs-toggle="pill" data-bs-target="#details" href="javascript:void(0)" aria-controls="sunlight" aria-selected="false">Additional Info</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="watering-tab" data-toggle="tab" href="#watering" aria-controls="watering" aria-selected="false">Watering Care</a>
+                <a class="nav-link" id="sunlight-tab" data-bs-toggle="pill" data-bs-target="#sunlight" href="javascript:void(0)" aria-controls="sunlight" aria-selected="false">Sunlight Care</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" aria-controls="map" aria-selected="false">Map</a>
+                <a class="nav-link" id="watering-tab"data-bs-toggle="pill" data-bs-target="#watering" href="javascript:void(0)" aria-controls="watering" aria-selected="false">Watering Care</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="map-tab" data-bs-toggle="pill" data-bs-target="#map" href="javascript:void(0)" aria-controls="map" aria-selected="false">Map</a>
             </li>
         </ul>
        <div class="tab-content p-3 border-right border-left">
         <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-            <dl class="row">
-                <p>@plant.description</p>
-            </dl>
+                <section id="team" class="team section-bg">
+                  <div class="container">
+
+
+
+                      <div class="col-lg-12">
+                        <div class="member d-flex align-items-start">
+                          <div><img src="@plant.default_image.original_url" class="img-fluid" alt=""></div>
+                          <div class="member-info">
+                            <h5>@plant.description</h5>
+              
+                          </div>
+                        </div>
+                      </div>
+
+   
+
+                  </div>
+                </section><!-- End Team Section -->
+            
+        </div>
+        <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+                <section id="team" class="team section-bg">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-4">
+                        <div class="member d-flex align-items-start mt-4" data-aos="zoom-in" data-aos-delay="100">
+                          
+                          <div class="member-info">
+                              <h4>Size Guide</h4>
+                                @if(plant.dimension is not null)
+                                {
+                                    <h5>
+                                        Average size: @plant.dimension
+
+                                        This plant is @(plant.indoor == true ? "": "not") an indoor plant. 
+
+                                        For information on sizing in your region, check out our AI chatbot. 
+                                    </h5>
+                                }
+                                else
+                                {
+                                        <h5>
+                                            Average size: @plant.dimensions.max_value @plant.dimensions.unit
+                                            This plant is @(plant.indoor == true ? "": "not") an indoor plant. 
+
+                                            For information on sizing in your region, check out our AI chatbot. 
+                                        </h5>
+                                }
+                                       
+              
+                          </div>
+                        </div>
+                      </div>
+                        @if(plant.flowers == true)
+                        {
+                                <div class="col-lg-4">
+                        <div class="member d-flex align-items-start mt-4" data-aos="zoom-in" data-aos-delay="100">
+                          
+                            <div class="member-info">
+                                <h4>Flowering Guide</h4>
+                                <h5>This is a flowering plant! The flowering season for this plant is @(plant.flowering_season is null ? "unknown" : plant.flowering_season).
+                                    The flower color is @(plant.flower_color is null ? "unknown" : plant.flower_color.ToLower()).
+                                </h5>
+                                        
+
+
+                            </div>
+                        </div>
+                        </div>
+                        }
+                            
+                    <div class="col-lg-4">
+                    <div class="member d-flex align-items-start mt-4" data-aos="zoom-in" data-aos-delay="100">
+                          
+                        <div class="member-info">
+                            <h4>Maintenance Guide</h4>
+                        <h5>This plant requires @(plant.maintenance is null ? "variable": plant.maintenance.ToString().ToLower()) maintenance at a @(plant.care_level is null ? "varying" : plant.care_level.ToLower()) care level. 
+                            This plant has a @plant.growth_rate.ToString().ToLower() growth rate.  
+                        </h5>
+              
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                    <div class="member d-flex align-items-start mt-4">
+                          
+                        <div class="member-info">
+                            <h4>Environment Guide</h4>
+                            <h5> 
+                                This plant is @(plant.drought_tolerant == true ? "": "not") drought tolerant and is @(plant.salt_tolerant == true ? "": "not") salt tolerant. 
+                                It is @(plant.tropical == true ? "": "not") a tropical plant. They are @(plant.thorny == true ? "": "not") thorny and are @(plant.invasive == true ? "": "not") known to be invasive.
+                            </h5>
+              
+                        </div>
+                    </div>
+                    </div>
+                             
+                    <div class="col-lg-4">
+                    <div class="member d-flex align-items-start mt-4">
+                          
+                        <div class="member-info">
+                            <h4>Health Guide</h4>
+                            <h5> 
+                                This is @(plant.medicinal == true ? "": "not") a medicinal plant. 
+                                It is @(plant.poisonous_to_humans == 0 ? "not": "") poisonous to humans and is @(plant.poisonous_to_pets == 0 ? "not": "") poisonous to pets.
+                                Always remember, safety first!
+                            </h5>
+              
+                        </div>
+                    </div>
+                    </div>
+                            
+                    </div>
+                      
+   
+
+                  </div>
+                </section><!-- End Team Section -->
+            
         </div>
         <div class="tab-pane fade" id="sunlight" role="tabpanel" aria-labelledby="sunlight-tab">
-            <p>Sunlight care: @sunCareGuide</p>
+            <section id="team" class="team section-bg">
+                  <div class="container">
+
+
+
+                      <div class="col-lg-12">
+                        <div class="member d-flex align-items-start">
+                          <div><img src="https://www.creativefabrica.com/wp-content/uploads/2020/04/21/sun-Icon-Vector-thin-line-Graphics-3920713-1.jpg" class="img-fluid" alt=""></div>
+                          <div class="member-info">
+                            <h5>@sunCareGuide</h5>
+              
+                          </div>
+                        </div>
+                      </div>
+
+   
+
+                  </div>
+                </section><!-- End Team Section -->
         </div>
         <div class="tab-pane fade" id="watering" role="tabpanel" aria-labelledby="watering-tab">
-            <p>Watering care: @waterCareGuide</p>
+            <section id="team" class="team section-bg">
+                  <div class="container">
+
+
+
+                      <div class="col-lg-12">
+                        <div class="member d-flex align-items-start">
+                          <div><img src="https://www.yellowstonenationalparklodges.com/content/uploads/2017/10/Water-Icon.png" class="img-fluid" alt=""></div>
+                          <div class="member-info">
+                            <h5>
+                                @waterCareGuide
+                            </h5>
+                            
+           
+              
+                          </div>
+                        </div>
+                      </div>
+
+   
+
+                  </div>
+                </section><!-- End Team Section -->
         </div>
         <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
             <p>The image below highlights regions where this plant thrives:</p>
             <iframe frameborder=0 scrolling=yes seamless=seamless width="100%" height=550 style='margin:auto;' src='@plant.hardiness_location.full_url'></iframe>
         </div>
-        </div>
+    </div>
     }
-</div>
-
-
-    @*<div>
-        <img src="@plant.default_image.thumbnail" /> 
-        <p>@plant.description</p>
-        <p>Sunlight care: @sunCareGuide</p>
-        <p>Watering care: @waterCareGuide</p>
-        <p>The image below highlights regions where this plant thrives:</p>
-        <iframe frameborder=0 scrolling=yes seamless=seamless width="100%" height=550 style='margin:auto;' src='@plant.hardiness_location.full_url'></iframe>
-    
     </div>
 
-    @if (isFavorite)
-    {
-        <p>This is a favorite</p>
-    
-        <input type="button" class="btn btn-primary" @onclick="() => RemovePlant(plant.id.ToString())" value="Remove from favorites"></input>
-    
-    }else{
-        <p>This is not a favorite</p>
-   
-        <input type="button" class="btn btn-primary" @onclick="() => AddFavorite(plant.id.ToString())" value="Add to favorites"></input> 
-    
-   
-    }*@
+
+
 
 
 

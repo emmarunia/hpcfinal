@@ -1,14 +1,17 @@
 ﻿@page "/admin"
 
 <div class="mt-header">
-    <h3>Manage Users</h3>
+    <div class="section-title">
+          <h2>Manage Users</h2>
+        </div>
+
     @* <p>
         <NavLink class="btn btn-primary" href="create-user">Add User</NavLink>
         <NavLink class="btn btn-primary" href="create-role">Add Role</NavLink>
         <NavLink class="btn btn-primary" href="manage-role">Manage Roles</NavLink>
     </p> *@
-
-    @if (Users == null)
+    <div class="container">
+        @if (Users == null)
     {
         <p><em>Loading...</em></p>
     }
@@ -44,5 +47,7 @@
             </tbody>
         </table>
     }
+    </div>
+    
 </div>
 

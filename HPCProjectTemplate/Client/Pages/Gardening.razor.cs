@@ -17,6 +17,7 @@ namespace HPCProjectTemplate.Client.Pages
         public List<Posts> Posts { get; set; } = new List<Posts>();
         //public ReplyList? ReplyList { get; set; } = null;
         public List<Replies> Replies { get; set; } = new List<Replies>();
+        public RepliesList? RepliesList { get; set; } = null;
 
 
         protected override async Task OnInitializedAsync()
@@ -25,7 +26,8 @@ namespace HPCProjectTemplate.Client.Pages
             if (UserAuth is not null && UserAuth.IsAuthenticated)
             {
                 PostList = await Http.GetFromJsonAsync<PostsList>($"api/get-posts");
-                //ReplyList = await Http.GetFromJsonAsync<PostsList>($"api/get-replies");
+             
+                RepliesList = await Http.GetFromJsonAsync<RepliesList>("api/get-replies");
             }
             foreach (var post in PostList!.ListOfPosts)
             {
@@ -34,6 +36,11 @@ namespace HPCProjectTemplate.Client.Pages
                     Posts.Add(post);
                 }
             }
+            foreach (var reply in RepliesList!.ListOfReplies)
+            {
+                Replies.Add(reply);
+            }
+
         }
     }
 }

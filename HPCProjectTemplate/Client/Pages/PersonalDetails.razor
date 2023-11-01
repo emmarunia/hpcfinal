@@ -3,34 +3,53 @@
 @using HPCProjectTemplate.Shared;
 
 <div class="mt-header">
-    @if (user is not null && user.Birthday != "")
-{
-    <h3>@user.FirstName @user.LastName</h3>
-    <div>
-        <h1>Profile</h1>
-        <p>First Name: @user.FirstName</p>
-        <p>Last Name: @user.LastName</p>
-        <p>Email: @user.Email</p>
-        <p>Birthday:@user.Birthday</p>
-    </div>
-}
+       <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
 
-@if (user is not null && user.Birthday == "")
-{
-    <h3>@user.FirstName @user.LastName</h3>
-    <div>
-        <h1>Profile</h1>
-        <p>First Name: @user.FirstName</p>
-        <p>Last Name: @user.LastName</p>
-        <p>Email: @user.Email</p>
-        <p>
-            Enter birthday here:
-           
-        </p>
-        <input type="text" class="form-control w-50" @bind="Birthday" placeholder="Add birthday for 10% the whole month!"/>
-        <button type="button" class="btn btn-primary" @onclick="() => AddBirthday()">Add Birthday</button>
-    </div>
-}
+        <div class="section-title">
+          <h2>Profile</h2>
+        </div>
+        @if(user is not null)
+            {
+                    <div class="row content">
+          <div class="col-lg-6">
+            <p>
+             Details for @user.FirstName @user.LastName
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Username: @user.UserName</li>
+              <li><i class="ri-check-double-line"></i> Email: @user.Email</li>
+              <li><i class="ri-check-double-line"></i> Birthday: @(user.Birthday=="" ? "Add Your Birthday!" : user.Birthday)</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+              @if (user.Birthday == "" || user.Birthday is null)
+                {
+                    <p>
+                       Add your birthday below to get 10% off all products from our site for your entire birth month!     
+                    </p>
+                    <input type="text" class="form-control w-50" @bind="Birthday" placeholder="Insert birthday..."/>
+                        <a href="javascript:void(0)" class="btn-learn-more" @onclick="() => AddBirthday()">Add Birthday</a>
+
+                    }
+                    else
+                    {
+                        <p>
+                            Thank you for adding your birthday and using our app! As a thank you, you'll get 10% off all products from our site for your entire birth month.
+                        </p>
+
+                    }
+
+            
+          </div>
+        </div>
+            }
+        
+
+      </div>
+    </section><!-- End About Us Section -->
+
 </div>
 
 

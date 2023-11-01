@@ -70,7 +70,7 @@ namespace HPCProjectTemplate.Server.Data
                 new Product { id = 5, name = "Gardening Gloves", brand = "Cool Job", price = 9.99,
                     link = "https://a.co/d/8I984yK",
                     imageURL = "https://m.media-amazon.com/images/I/81-H4AxC-HL._AC_SL1500_.jpg",
-                    image2 = "https://b3n8a3n8.rocketcdn.me/wp-content/uploads/2021/08/best-gardening-gloves.jpg"
+                    image2 = "https://plus.unsplash.com/premium_photo-1664197864628-384a048404af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHx8&w=1000&q=80"
                 },
                 new Product { id = 6, name = "Small Pot", brand = "Trendspot", price = 15.00,
                     link = "https://www.homedepot.com/p/Trendspot-6-in-White-Knack-Ceramic-Decorative-Planter-CR01721S-06W/314647810#overlay",

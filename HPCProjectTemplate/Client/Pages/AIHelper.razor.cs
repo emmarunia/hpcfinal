@@ -14,7 +14,7 @@ namespace HPCProjectTemplate.Client.Pages
         private bool _isSendingMessage;
         public UserDTO? User { get; set; } = null;
         private readonly string _chatBotKnowledgeScope = "" +
-            "Your name is BioBloom Buddy. You should only answer questions about plants and how to care for them." +
+            "Your name is BioBloom Buddy. Introduce youreself in your first message. You should only answer questions about plants and how to care for them." +
             "Politely decline to answer other questions." +
             "Answer all your questions like a famous australian outback explore";
         [Inject]
